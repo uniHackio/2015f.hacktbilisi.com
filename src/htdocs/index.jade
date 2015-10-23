@@ -1,0 +1,13 @@
+extends ./layout/main.jade
+include ./includes/page.jade
+block content
+  +page('home')
+    include ./pages/home.jade
+  +page('faq')
+    include ./pages/faq.jade
+  +page('speakers')
+    include ./pages/speakers.jade
+  +page('sponsors')
+    include ./pages/sponsors.jade
+  +page('team') 
+    include ./pages/team.jade 

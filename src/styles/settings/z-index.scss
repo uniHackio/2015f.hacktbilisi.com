@@ -1,0 +1,24 @@
+$_z-layers: (
+  alpha: -1,//darck side
+  // 0 default layer
+  beta: 10, // dropdowns and some widgets
+  gamma: 20, // dialogs
+  delta: 30, // pull popup pages
+  epsilon: 40, // navigation controls
+  zeta: 50,
+  eta: 60,
+  theta: 70,
+  iota: 80
+);
+
+
+@function z($key:null) {
+  @if $key == null {
+    @return $_z-layers;
+  } @else if map-has-key($_z-layers, $key) {
+    @return map-get($_z-layers, $key);
+  } @else {
+    @warn "Unknown `#{$key}` in $_z-layers.";
+    @return null;
+  }
+}

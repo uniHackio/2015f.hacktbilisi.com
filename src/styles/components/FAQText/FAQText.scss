@@ -1,0 +1,36 @@
+.FAQText{
+  @include respond-to(s){
+    column-count: 2;
+    column-gap: 20px;
+  }
+  @include respond-to(m){
+    column-count: 3;
+    column-gap: 20px;
+  }
+  & > :first-child { 
+    margin-top: 0 !important;
+  }
+  & > :last-child { 
+    margin-bottom: 0 !important;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: font(family,secondary);
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    margin-top: 1.5em;
+  }
+  a {
+    color: color(red);
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+  p {
+    margin-bottom: 1em;
+  }
+}

@@ -1,0 +1,13 @@
+.Heading{
+  &:before,
+  &:after{
+    content: '';
+    width: 2em;
+    display: inline-block;
+    height: 0.1em;
+    vertical-align: middle;
+    background: currentColor;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+}

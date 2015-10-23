@@ -1,0 +1,67 @@
+$_font: (
+  size: (
+     xs:12,
+      s:14,
+      m:16,
+      l:18,
+     xl:20,
+    xxl:24,
+    3xl:30,
+    4xl:45,
+    5xl:60
+  ),
+  lineHeight: (
+    xs: 1,
+    s: 1.2,
+    m: 1.5,
+    l: 1.6,
+    xl: 2
+  ),
+  family: (
+    primary: 'DejaVuNeue',
+    secondary: 'DejaVuNeueCaps'
+  ),
+  weight: (
+    light: 100,
+    normal: 400,
+    bold: 700
+  ),
+  faces: (
+    font-face('DejaVu Neue', 'DejaVuNeue-ExtraLight', 100, normal),
+    font-face('DejaVu Neue', 'DejaVuNeue', 400, normal),
+    font-face('DejaVu Neue', 'DejaVuNeue-Bold', 700, normal),
+    font-face('DejaVu Neue Caps', 'DejaVuNeueCaps-ExtraLight', 100, normal),
+    font-face('DejaVu Neue Caps', 'DejaVuNeueCaps', 400, normal),
+    font-face('DejaVu Neue Caps', 'DejaVuNeueCaps-Bold', 700, normal)
+  ),
+  default: (
+    size: m,
+    family: primary,
+    weight: normal,
+    lineHeight: m
+  ),
+  rootFontSize: 10
+);
+
+@function font($keys...) {
+  @if length($keys) == 0 {
+    @return $_font;
+  } @else if map-has-nested-keys($_font, $keys...) {
+    $value: map-deep-get($_font, $keys...);
+    @if length($keys) == 1 and first($keys) == size {
+      @return map-walk($value, rem);
+    } @else if length($keys) > 1{
+      @if first($keys) == size {
+        @return rem($value);
+      } @else if first($keys) == default {
+        @if map-has-nested-keys($_font, nth($keys,2), $value) {
+          @return map-deep-get($_font, nth($keys,2), $value);
+        }
+      }
+    }
+    @return $value;
+  } @else{
+    @warn "Unknown `#{$keys}` in $_font.";
+    @return null;
+  }
+}

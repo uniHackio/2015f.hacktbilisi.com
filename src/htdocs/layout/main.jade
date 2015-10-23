@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='UTF-8')
+    meta(property='og:title', content=t('META_TITLE'))
+    meta(property='og:type', content='website')
+    meta(property='og:image', content= t('META_SITE_URL') + '/images/logo.png')
+    meta(property='og:url', content= t('META_SITE_URL'))
+    meta(property='og:description', content=t('META_DESCRIPTION'))
+    meta(name='description', content=t('META_DESCRIPTION'))
+    meta(property='og:site_name', content=t('META_SITE_NAME'))
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    link(rel='stylesheet', href='/application.css')
+    link(rel='stylesheet', href='/fonts.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+    link(rel='shortcut icon' href='/images/favicon.ico')
+    meta( name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    title=t('META_TITLE')
+  body.home-visable
+    block content
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r73/three.min.js")
+    script(src='/app.js')

@@ -1,0 +1,17 @@
+@include utilsGenerator((
+  classes: (
+    zIndex: (z-index),
+  ),
+  values: z(),
+  responsive:true
+));
+
+
+
+/**
+ * create Stacking Context
+ * @see https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+ */
+.u-StackingContext{
+  opacity: 0.99;
+}

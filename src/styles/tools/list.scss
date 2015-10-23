@@ -1,0 +1,30 @@
+@function first($list) {
+  @return nth($list, 1);
+}
+
+@function last($list) {
+  @return nth($list, length($list));
+}
+
+
+
+// A Sass walk function,
+// Calling a given function to each member of a list
+// ---
+// @param [list] $list: list to walk through
+// @param [string] $function: function to apply to all members
+// @param [argList] $args: extra arguments to pass to the function
+// ---
+// @return [list] $list: updated list
+@function walk($list, $function, $args...) {
+  @if not function-exists($function) {
+    @warn "There is no `#{$function}` function.";
+    @return false;
+  }
+
+  @for $i from 1 through length($list) {
+    $list: set-nth($list, $i, call($function, nth($list, $i), $args...));
+  }
+
+  @return $list;
+}

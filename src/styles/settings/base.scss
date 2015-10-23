@@ -1,0 +1,24 @@
+$_base: (
+  rootFontSize: lazy(font, rootFontSize),
+  lineHeight: lazy(font, default, lineHeight),
+  fontSize: lazy(font, default, size),
+  fontFamily: lazy(font, default, family),
+  fontWeight: lazy(font, default, weight),
+  background: lazy(color, blueDark),
+  color: lazy(color, whitish),
+  focus: lazy(color, blue),
+);
+
+
+@function base($key) {
+  @if map-has-key($_base, $key) {
+    $result: map-get($_base, $key);
+    @if is-lazy($result) {
+      @return lazy-value($result);
+    }
+    @return $result;
+  } @else{
+    @warn "Unknown `#{$key}` in $_base.";
+    @return null;
+  }
+}

@@ -1,0 +1,21 @@
+@include utilsGenerator((
+  classes: (
+    display: (display)
+  ),
+  values: (
+    block: block,
+    inline: inline,
+    inlineBlock: inline-block,
+    flex: flex,
+    none: none
+  ),
+  responsive: true
+));
+
+
+.u-fillChild{
+  display: flex;
+  & > * {
+    flex:1 1 auto;
+  }
+}

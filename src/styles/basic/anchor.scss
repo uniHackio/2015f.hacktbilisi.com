@@ -1,0 +1,15 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ /*
+  * change default outline color don't remove it
+  * @see http://www.outlinenone.com/
+  *
+  * 1 - override normalize.css's style
+  */
+ button:focus, /* [1] */
+ :focus {
+  outline-color: base(focus)
+}

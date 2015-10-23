@@ -1,0 +1,23 @@
+
+// interactins
+.u-cursor-pointer {
+  cursor: pointer;
+}
+
+.u-cursor-default {
+  cursor: default;
+}
+
+
+.u-unSelectable{
+  user-select: none;
+}
+
+.u-noneInteractive{
+  pointer-events: none;
+  user-select: none;
+}
+
+.u-outlineNone:focus{
+  outline: none;
+}

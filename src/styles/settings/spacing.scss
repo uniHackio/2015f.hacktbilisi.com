@@ -1,0 +1,23 @@
+$_spacing: (
+  xxs: 5,
+  xs:  10,
+  s:   20,
+  m:   30,
+  l:   40,
+  xl:  50,
+  xxl: 100,
+  3xl: 150,
+  4xl: 200
+);
+
+
+@function spacing($key:null) {
+  @if $key == null {
+    @return map-walk($_spacing, rem);
+  } @else if map-has-key($_spacing, $key) {
+    @return rem(map-get($_spacing, $key));
+  } @else {
+    @warn "Unknown `#{$key}` in $_spacing.";
+    @return null;
+  }
+}

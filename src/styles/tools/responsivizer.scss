@@ -1,0 +1,98 @@
+
+
+@mixin respond-to($breakpoint) {
+  $min-width: breakpoint($breakpoint);
+
+  @if $min-width {
+    @media (min-width: $min-width) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+
+
+@mixin util($selector, $prefix: ".u-", $responsive: true){
+  @include responsivize( #{$prefix}#{$selector}, $responsive) {
+    @content;
+  }
+}
+@mixin responsivize($selector, $responsive: true){
+  #{$selector} {
+    @content;
+  }
+  @if $responsive {
+    @each $brake in breakpoint-names() {
+      @include respond-to($brake) {
+        #{$selector}\@#{$brake} {
+          @content;
+        }
+      }
+    }
+  }
+
+}
+
+@mixin utilsGenerator($settings){
+  $settings: map-merge((responsive: false, seperator: "-", prefix: '.u-', important:true), $settings);
+  @each $name, $props in map-get($settings, classes) {
+    @each $valueName, $value in map-get($settings, values) {
+      $seperator: map-get($settings, seperator);
+      @if $valueName == ''{
+        $seperator: ''
+      }
+      @include responsivize(#{map-get($settings, prefix)}#{$name}#{$seperator}#{$valueName}, $responsive:map-get($settings, responsive)) {
+        @each $prop in $props {
+          @if(map-get($settings, important)){
+            #{$prop}: $value !important;
+          } @else{
+            #{$prop}: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@mixin print {
+  @media print {
+      @content
+  }
+}
+
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+
+// @include utilsGenerator((
+//   classes:(
+//     ml: (margin-left),
+//     mr: (margin-right),
+//     mt: (margin-top),
+//     mb: (margin-bottom),
+//     mh: (margin-left, margin-right),
+//     mv: (margin-bottom, margin-top)
+//   ),
+//   values:(
+//     a: auto,
+//     s: 5px,
+//     m: 10px,
+//     l: 20px
+//   ),
+//   responsive: true
+// ))

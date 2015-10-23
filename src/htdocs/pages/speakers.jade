@@ -1,0 +1,32 @@
+include ../includes/icon.jade
+
+.u-heightMin-vFull.u-background-blackish.u-color-whitish.u-position-relative(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m" style="background:url('/images/section-background-1.png') center;background-size:cover")
+  .Grid.Grid--gutterWide.Grid--spaceBetween.Grid--alignCenter
+    .Grid-block.Grid-block--weight1
+      a.u-display-inlineBlock(href='#home')
+        img.u-width-full(src="/images/logoWhite.svg", alt="HackTbilisi")
+    .Grid-block.Grid-block--fit
+        a.u-display-inlineBlock(href="#menu")
+          +icon('bars')
+  .Content
+    h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('სპიკერები')
+    .Grid.Grid--wrap.Grid--gutterWide
+      for speaker in speakers
+        .Grid-block.Grid-block--fit(class="u-size1/1 u-size1/2@s u-size1/3@m u-size1/4@l")
+          .FlexEmbed
+            .FlexEmbed-ratio.FlexEmbed-ratio--4by5
+            .FlexEmbed-content.u-fillChild
+              .Card.u-fillChild
+                //- .Card-overlay.u-background-red
+                .Card-content.u-fillChild
+                  .Grid.Grid--directionCol
+                    .Grid-block.Grid-block--weight1.u-fillChild(id=speaker.id, style="background:url('"+speaker.image+"') center; background-size:cover")
+                      .u-background-red.u-showOnCardHover.u-paddingAll-xs.u-wraped
+                        | Apple-მა და Hermès-მა მომხმარებელს Apple Watch Hermès გააცნეს, უჟანგავი ფოლადისა და ძვირადღირებული ტყავით შექმნილი საათი Hermès-ის სტილს 
+                    .Grid-block.Grid-block--fit.u-background-red.u-paddingAll-xs
+                      h1.u-textSize-s.u-textFamily-secondary=t(speaker.name)
+                      h2.u-textSize-xs.u-color-blackish=t(speaker.position)
+                      nav.u-textSize-xs.u-color-blackish
+                        each link in speaker.links
+                          a.u-marginRight-xs(title=t('%s on %s',[t(speaker.name), link.on]) href=link.href)
+                            +icon(link.icon)

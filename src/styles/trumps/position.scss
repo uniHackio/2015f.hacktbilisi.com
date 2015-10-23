@@ -1,0 +1,51 @@
+@include utilsGenerator((
+  classes: (
+    position: (position),
+  ),
+  values: (
+    static: static,
+    relative: relative,
+    absolute: absolute,
+    fixed: fixed
+  ),
+  responsive: true
+));
+
+@include utilsGenerator((
+  classes: (
+    stickLeft: (left),
+    stickRight: (right),
+    stickBottom: (bottom),
+    stickTop: (top),
+  ),
+  values: (
+    f: auto,
+    '': 0
+  ),
+  responsive: true
+));
+
+
+.u-posCenter{
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* TODO think about that
+
+
+.u-posMiddle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.u-posStretch {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+*/

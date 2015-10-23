@@ -1,0 +1,126 @@
+// Adopted from
+//   github.com/inuitcss/generic.reset
+//   github.com/suitcss/base
+
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications. Removes the default spacing and border for
+ * appropriate elements.
+ */
+
+
+body,
+form,
+fieldset,
+legend,
+table,
+th,
+td,
+caption,
+hr,
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+input, button {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+iframe {
+  border: 0;
+}
+
+
+ol,
+ul {
+  list-style: none;
+}
+
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+
+
+[tabindex="-1"]:focus {
+  outline: none !important;
+}
+
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+abbr[title],
+dfn[title] {
+    cursor: help;
+}
+
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+u,
+ins {
+    text-decoration: none;
+}
+
+
+/**
+ * Apply faux underlines to inserted text via `border-bottom`.
+ */
+ins {
+    border-bottom: 1px solid;
+}
+
+/**
+ * Reset box-sizing
+ * @see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+

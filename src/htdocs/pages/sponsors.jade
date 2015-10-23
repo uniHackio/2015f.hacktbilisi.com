@@ -1,0 +1,44 @@
+
+mixin sponsorItem(sponsor,sponsorGroupName)
+  case sponsorGroupName
+    when 'giga'
+      a.Grid-block.Grid-block--fit(class="u-size1/1  u-size1/2@m" title=sponsor.name, href=sponsor.href)
+        img(alt=sponsor.name,src=sponsor.image)
+    when 'mega'
+      a.Grid-block.Grid-block--fit(class="u-size1/2  u-size1/3@m" title=sponsor.name, href=sponsor.href)
+        img(alt=sponsor.name,src=sponsor.image)
+    when 'kilo'
+      a.Grid-block.Grid-block--fit(class="u-size1/2 u-size1/3@s u-size1/4@m" title=sponsor.name, href=sponsor.href)
+        img(alt=sponsor.name,src=sponsor.image)
+  
+    
+
+.u-heightMin-vFull.u-background-whitish.u-color-blackish.u-position-relative(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m")
+  .Grid.Grid--gutterWide.Grid--spaceBetween.Grid--alignCenter
+    .Grid-block.Grid-block--weight1
+      a.u-display-inlineBlock(href='#home')
+        img.u-width-full(src="/images/logoColored.svg", alt="HackTbilisi")
+    .Grid-block.Grid-block--fit
+        a.u-display-inlineBlock(href="#menu")
+          +icon('bars')
+  .Content
+    h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('სპონსორები')
+    for sponsorGroup in sponsorGroups
+      .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide
+        for sponsor in sponsorGroup.sponsors
+          +sponsorItem(sponsor, sponsorGroup.name)
+
+    if partners.length
+      h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('პარტნიორები')
+      .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide
+        for partner in partners
+          a.Grid-block.Grid-block--fit(class="u-size1/1 u-size1/2@s u-size1/3@m u-size1/4@l" title=partner.name, href=partner.href)
+            img(alt=partner.name,src=partner.image)
+
+
+    if mediaPartners.length
+      h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('მედია პარტნიორები')
+      .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide
+        for mediaPartner in mediaPartners
+          a.Grid-block.Grid-block--fit(class="u-size1/1 u-size1/2@s u-size1/3@m u-size1/4@l" title=mediaPartner.name, href=mediaPartner.href)
+            img(alt=mediaPartner.name,src=mediaPartner.image)

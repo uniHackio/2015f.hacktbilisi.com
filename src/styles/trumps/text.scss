@@ -1,0 +1,118 @@
+
+// /**
+//  * Word breaking
+//  *
+//  * Break strings when their length exceeds the width of their container.
+//  */
+
+// .u-textBreak {
+//   word-wrap: break-word !important;
+// }
+
+
+// /**
+//  * Prevent whitespace wrapping
+//  */
+
+// .u-textNoWrap {
+//   white-space: nowrap !important;
+// }
+
+@include utilsGenerator((
+  classes: (
+    lineHeight: (line-height),
+  ),
+  values: font(lineHeight)
+));
+
+// .u-letterSpacing{
+//   letter-spacing: 0.2em;
+// }
+
+.u-textTruncate {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.u-textItalic {
+  font-style: italic;
+}
+
+.u-textUppercase {
+  text-transform: uppercase !important;
+}
+
+
+@include utilsGenerator((
+  classes: (
+    text: (text-align),
+  ),
+  values: (
+    center: center,
+    left: left,
+    right: right,
+    justify: justify
+  ),
+  responsive: true
+));
+
+@include utilsGenerator((
+  classes:(
+    align: (vertical-align)
+  ),
+  values: (
+    baseline: baseline,
+    bottom: bottom,
+    middle: middle,
+    super: super,
+    top: top
+  ),
+  responsive: true
+));
+
+
+@include utilsGenerator((
+  classes: (
+    textDirection: (direction),
+  ),
+  values: (rtl: rtl, ltr: ltr),
+  responsive: true
+));
+
+
+@include utilsGenerator((
+  classes: (
+    textSize: (font-size),
+  ),
+  values: map-merge((inherit: inherit),font(size)),
+  responsive: true
+));
+
+
+@include utilsGenerator((
+  classes: (
+    textWeight: (font-weight),
+  ),
+  values: font(weight),
+  responsive: true
+));
+
+
+@include utilsGenerator((
+  classes: (
+    textFamily: (font-family),
+  ),
+  values: font(family)
+));
+
+@include utilsGenerator((
+  classes: (
+    textDecoration: (text-decoration),
+  ),
+  values: (
+    none: none,
+    underline: underline,
+    overline: overline,
+    lineThrough: line-through
+  )
+));

@@ -1,0 +1,12 @@
+@import 'tools/map';
+@import 'tools/list';
+@import 'tools/font';
+
+@import 'settings/typography';
+
+
+@each $face in font(faces){
+  @include font-face($face,$path: './fonts/')
+}
+
+

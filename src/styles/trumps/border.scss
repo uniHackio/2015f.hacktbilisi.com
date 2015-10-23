@@ -1,0 +1,26 @@
+.u-bordered {
+  border-width: 0;
+  border-style: solid;
+  border-color: initial;
+}
+
+@include utilsGenerator((
+  classes:(
+    borderWidth: (border-width),
+    borderLeftWidth: (border-left-width),
+    borderRightWidth: (border-right-width),
+    borderBottomWidth: (border-bottom-width),
+    borderTopWidth: (border-top-width)
+  ),
+  values: border(width),
+  responsive: true
+));
+
+@include utilsGenerator((
+  classes:(
+    borderRadius: (border-radius)
+  ),
+  values: border(radius),
+  responsive: true
+));
+

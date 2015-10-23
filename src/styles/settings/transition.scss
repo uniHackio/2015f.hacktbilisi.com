@@ -1,0 +1,22 @@
+$_transition: (
+  duration: (
+    m: .3s
+  ),
+  function: (
+    in: ease-in,
+    out: ease-out,
+    outIn: cubic-bezier(0, 0, 0.2, 1)
+  )
+);
+
+@function transition($keys...) {
+  @if length($keys) == 0 {
+    @return $_transition;
+  } @else if map-has-nested-keys($_transition, $keys...) {
+    @return map-deep-get($_transition, $keys...);
+  } @else{
+    @warn "Unknown `#{$keys}` in $_transition.";
+    @return null;
+  }
+}
+

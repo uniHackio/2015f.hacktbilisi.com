@@ -1,0 +1,78 @@
+//TODO we souldnot need this sheat
+
+
+@include utilsGenerator((
+  classes: (
+    heightMax: (max-height),
+    heightMin: (min-height),
+    height: (height)
+  ),
+  values: (
+    0:0,
+    a:auto,
+    full: 100%,
+    vFull: 100vh
+  ),
+  responsive:true
+));
+@include utilsGenerator((
+  classes: (
+    widthMax: (max-width),
+    widthMin: (min-width),
+    width: (width)
+  ),
+  values: (
+    full: 100%
+  ),
+  responsive:true
+));
+
+// @include utilGenerator((
+//  heightMax: (max-height),
+//  heightMin: (min-height),
+//  height: (height)
+// ), (
+//  Full: 100%,
+//  VFull: 100vh,
+//   XSmall: em(30px),
+//   Small: em(120px),
+//   Medium: em(270px),
+//   Large: em(500px),
+//   XLarge: em(570px)
+// ), true ,"");
+
+// @include utilGenerator((
+//   widthMax: max-width,
+//   widthMin: min-width,
+//   width: width
+// ), (
+//   Full: 100%,
+//   half: 50%,
+//   XXSmall: em(30px),
+//   XSmall: em(45px),
+//   Small: em(120px),
+//   Medium: em(300px),
+//   Large: em(370px)
+// ), true ,"");
+
+
+
+@include size-generator((flex-basis), ".u-size","", $g-columns, $g-sizeSeperator);
+@include size-generator((width), ".u-width","", $g-columns, $g-sizeSeperator);
+@include size-generator((margin-left), ".u-push","", $g-columns, $g-sizeSeperator);
+@include size-generator((margin-right), ".u-pull","", $g-columns, $g-sizeSeperator);
+
+@each $brake in breakpoint-names() {
+  @include respond-to($brake) {
+    @include size-generator((flex-basis), ".u-size", "\@#{$brake}", $g-columns, $g-sizeSeperator);
+    @include size-generator((width), ".u-width", "\@#{$brake}", $g-columns, $g-sizeSeperator);
+    @include size-generator((margin-left), ".u-push", "\@#{$brake}", $g-columns, $g-sizeSeperator);
+    @include size-generator((margin-right), ".u-pull", "\@#{$brake}", $g-columns, $g-sizeSeperator);
+    .u-push0\@#{$brake} {
+      margin-left: 0 !important;
+    }
+    .u-pull0\@#{$brake} {
+      margin-right: 0 !important;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+include ../includes/icon.jade
+
+
+.u-heightMin-vFull.u-background-whitish.u-color-blueDark.u-position-relative#home(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m")
+  .Grid.Grid--gutterWide.Grid--spaceBetween.Grid--alignCenter
+    .Grid-block.Grid-block--weight1
+      a.u-display-inlineBlock(href='#home')
+        img.u-width-full(src="/images/logoColored.svg", alt="HackTbilisi")
+    .Grid-block.Grid-block--fit
+        a.u-display-inlineBlock(href="#menu")
+          +icon('bars')
+  .Content
+    h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('კითხვები')
+    article.FAQText!=md('./articles/faq.md') 

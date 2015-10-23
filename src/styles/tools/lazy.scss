@@ -1,0 +1,24 @@
+@function lazy($function,$args...){
+  @return (
+    _lazy_function: $function,
+    _lazy_args: $args
+  );
+}
+
+@function is-lazy($map){
+  @return map-has-keys($map, _lazy_function, _lazy_args);
+}
+
+@function lazy-value($map){
+  $function: map-get($map, _lazy_function);
+
+  @if not function-exists($function) {
+    @warn "There is no `#{$function}` function.";
+    @return false;
+  }
+
+  @return call(
+    map-get($map, _lazy_function),
+    map-get($map, _lazy_args)...
+  );
+}

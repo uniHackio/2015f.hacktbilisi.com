@@ -1,0 +1,25 @@
+$_colors: (
+  blackish:    hsl(0, 0%, 0%),
+  grayDarker:  hsl(0, 0%, 30%),
+  grayDark:    hsl(0, 0%, 40%),
+  gray:        hsl(0, 0%, 60%),
+  grayLight:   hsl(0, 0%, 70%),
+  grayLighter: hsl(0, 0%, 90%),
+  whitish:     hsl(0, 0%, 100%),
+  blueLight:   hsl(235, 65%, 90%),
+  blue:        hsl(235, 55%, 40%),
+  blueDark:    hsl(235, 10%, 10%),
+  red:         hsl(358, 84%, 63%)
+);
+
+
+@function color($key:null) {
+  @if $key == null {
+    @return $_colors;
+  } @else if map-has-key($_colors, $key) {
+    @return map-get($_colors, $key);
+  } @else {
+    @warn "Unknown `#{$key}` in $_colors.";
+    @return null;
+  }
+}

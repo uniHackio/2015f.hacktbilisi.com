@@ -1,0 +1,27 @@
+include ../includes/icon.jade
+
+.u-heightMin-vFull.u-background-blackish.u-color-whitish.u-position-relative(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m" style="background:url('/images/section-background-2.png') center;background-size:cover")
+  .Grid.Grid--gutterWide.Grid--spaceBetween.Grid--alignCenter
+    .Grid-block.Grid-block--weight1
+      a.u-display-inlineBlock(href='#home')
+        img.u-width-full(src="/images/logoWhite.svg", alt="HackTbilisi")
+    .Grid-block.Grid-block--fit
+        a.u-display-inlineBlock(href="#menu")
+          +icon('bars')
+  .Content
+    h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('გუნდი')
+    .Grid.Grid--wrap.Grid--gutterWide.u-color-blackish
+      for person in team
+        .Grid-block.Grid-block--fit(class="u-size1/1 u-size1/2@s u-size1/3@m u-size1/4@l")
+          .FlexEmbed
+            .FlexEmbed-ratio.FlexEmbed-ratio--4by5
+            .FlexEmbed-content.u-fillChild
+              .Grid.Grid--directionCol
+                .Grid-block.Grid-block--weight1.u-fillChild(id=person.id, style="background:url('"+person.image+"') center; background-size:cover")
+                .Grid-block.Grid-block--fit.u-background-whitish.u-paddingAll-xs
+                  h1.u-textSize-s.u-color-blue.u-textFamily-secondary.u-textWeight-bold=t(person.name)
+                  h2.u-textSize-xs=t(person.position)
+                  nav.u-textSize-xs
+                    each link in person.links
+                      a.u-marginRight-xs(title=t('%s on %s',[t(person.name), link.on]) href=link.href)
+                        +icon(link.icon)

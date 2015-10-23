@@ -1,0 +1,13 @@
+@include utilsGenerator((
+  classes: (
+    paddingAll: (padding),
+    paddingBottom: (padding-bottom),
+    paddingLeft: (padding-left),
+    paddingRight: (padding-right),
+    paddingTop: (padding-top),
+    paddingHorisontal: (padding-left, padding-right),
+    paddingVertical: (padding-top,padding-bottom)
+  ),
+  values: map-merge((f: 0), spacing()),
+  responsive: true
+));

@@ -1,0 +1,8 @@
+@include utilsGenerator((
+  classes:(
+    color: (color),
+    background: (background-color)
+  ),
+  values: map-merge((inherit:inherit), color()),
+  responsive: true
+))

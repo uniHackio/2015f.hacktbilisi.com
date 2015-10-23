@@ -1,0 +1,22 @@
+$_border: (
+  radius: (
+    m: 5px,
+    rounded: 50%
+  ),
+  width: (
+    s: 1px,
+    m: 2px,
+    l: 4px
+  )
+);
+
+@function border($keys...) {
+  @if length($keys) == 0 {
+    @return $_border;
+  } @else if map-has-nested-keys($_border, $keys...) {
+    @return map-deep-get($_border, $keys...);
+  } @else{
+    @warn "Unknown `#{$keys}` in $_border.";
+    @return null;
+  }
+}

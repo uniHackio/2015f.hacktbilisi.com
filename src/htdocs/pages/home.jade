@@ -1,0 +1,62 @@
+include ../includes/icon.jade
+mixin mainNavigationLink(url,target,title)
+  li(class='u-marginLeft-s@l u-display-inlineBlock@l for-' + target)
+    a(href=url)
+      span.title=title
+
+.Grid.Grid--directionCol.Grid--spaceBetween.u-heightMin-vFull.u-color-blueLight.u-position-relative#home
+  .u-position-absolute.u-stickTop.u-stickLeft.u-stickRight.u-stickBottom.u-zIndex-alpha#main-background(style="background:url('/images/background.png') center;background-size:cover")
+  .Grid-block.Grid-block--fit(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m")
+    .Grid.Grid--gutterWide.Grid--spaceBetween.Grid--alignCenter
+      .Grid-block.Grid-block--weight1
+        a.u-display-inlineBlock(href='#home')
+          img.u-width-full(src="/images/logoWhite.svg", alt="HackTbilisi")
+      .Grid-block.Grid-block--fit
+        .Navigation#menu
+          a.Navigation-burger(href="#menu")
+            +icon('bars')
+          a.Navigation-close(href="#home")
+            +icon('times')
+          ul.Navigation-menu
+            +mainNavigationLink('#faq', 'faq', t('კითხვები'))
+            +mainNavigationLink('#speakers', 'speakers', t('სპიკერები'))
+            +mainNavigationLink('#sponsors', 'sponsors', t('სპონსორები'))
+            +mainNavigationLink('#team', 'team' , t('გუნდი'))
+            //- +mainNavigationLink('/agenda#' + t('languagePrefix'), 'agenda', t('განრიგი'))
+            +mainNavigationLink(t('nextLanguage').url, 'nextLanguage', t('nextLanguage').title)  
+        
+  .Grid-block.Grid-block--fit(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m")
+    h1.u-textFamily-secondary(class='u-textSize-3xl u-textSize-4xl@s u-textSize-5xl@l')
+      p.u-lineHeight-s
+        span.u-textWeight-bold 72 
+        span.u-textWeight-light საათი
+      p.u-lineHeight-s
+        span.u-textWeight-bold 10 
+        span.u-textWeight-light სპიკერი
+      p.u-lineHeight-s
+        span.u-textWeight-bold 3000
+        span ¢ 
+        span.u-textWeight-light საპრიზო
+    h2.u-marginBottom-s.u-textSize-m.u-color-grayDark 18, 19 & 20 დეკემბერი
+    a.u-display-inlineBlock.u-color-red.u-bordered.u-borderWidth-m.u-borderRadius-m.u-paddingVertical-xs.u-paddingHorisontal-s.u-textSize-xl(href="#" target="_blank") #{t('Register')} 
+      +icon('long-arrow-right')
+
+  .Grid-block.Grid-block--fit(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m")
+    .Grid.Grid--spaceBetween.Grid--wrap.Grid--gutterWide
+      .Grid-block.Grid-block--fit.u-align-middle
+        a.u-display-inlineBlock(href="http://uniHack.ge", target="_blank" title='uniHack')
+          span.text .uniHack
+        a.u-display-inlineBlock.u-align-middle.u-marginLeft-s(href="http://freeuni.edu.ge", target="_blank"  title=t('Free university of Tbilisi'))
+          img.image(alt=t('Free university of Tbilisi') src="/images/free"+ t('languagePrefix')+".png" height="20")
+      .Grid-block.Grid-block--fit
+        nav
+          a(title=t('%s on %s',['HackTbilisi', 'facebook']) href='https://www.facebook.com/hacktbilisi')
+            +icon('facebook')
+          a.u-marginLeft-xs(title=t('%s on %s',['HackTbilisi', 'twitter']) href='https://twitter.com/hacktbilisi')
+            +icon('twitter')
+          a.u-marginLeft-xs(title=t('%s on %s',['uniHackge', 'google+']) href='https://plus.google.com/107084110225494322165')
+            +icon('google-plus')
+          a.u-marginLeft-xs(title=t('%s on %s',['uniHackge', 'youtube']) href='https://www.youtube.com/uniHackge')
+            +icon('youtube-play')
+          a.u-marginLeft-xs(title=t('contact us') href='mailto:team@unihack.ge?Subject=wow%20much%20love')
+            +icon('envelope')

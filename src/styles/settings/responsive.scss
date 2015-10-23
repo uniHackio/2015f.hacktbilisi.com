@@ -1,0 +1,21 @@
+$_breakpoints: (
+  s: 480,
+  m: 720,
+  l: 960
+);
+
+@function breakpoint($key:null) {
+  @if $key == null {
+    @return map-walk($_breakpoints, rem);
+  } @else if map-has-key($_breakpoints, $key) {
+    @return em(map-get($_breakpoints, $key));
+  } @else {
+    @warn "Unknown `#{$key}` in $_breakpoints.";
+    @return null;
+  }
+}
+
+
+@function breakpoint-names(){
+  @return map-keys($_breakpoints);
+}

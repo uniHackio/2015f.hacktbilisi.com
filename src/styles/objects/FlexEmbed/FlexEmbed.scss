@@ -1,0 +1,113 @@
+/**
+ * Flexible media embeds
+ *
+ * For use with media embeds – such as videos, slideshows, or even images –
+ * that need to retain a specific aspect ratio but adapt to the width of their
+ * containing element.
+ *
+ * Based on: http://alistapart.com/article/creating-intrinsic-ratios-for-video
+ * Copied from: https://github.com/suitcss/components-flex-embed
+ */
+
+.FlexEmbed {
+  display: block;
+  position: relative;
+}
+
+.FlexEmbed--clip{
+  overflow: hidden;
+}
+/**
+ * The aspect-ratio hack is applied to an empty element because it allows
+ * the component to respect `max-height`. Default aspect ratio is 1:1.
+ */
+
+.FlexEmbed-ratio {
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Modifier: 1:1 aspect ratio
+ */
+
+@include responsivize('.FlexEmbed-ratio--1by1') {
+  padding-bottom: 100%;
+}
+/**
+ * Modifier: 3:1 aspect ratio
+ */
+
+@include responsivize('.FlexEmbed-ratio--3by1') {
+  padding-bottom: calc(100% / 3);
+}
+/**
+ * Modifier: 8:3 aspect ratio
+ */
+
+@include responsivize('.FlexEmbed-ratio--8by3') {
+  padding-bottom: calc(100% * 3 / 8);
+}
+
+/**
+ * Modifier: 2:1 aspect ratio
+ */
+
+@include responsivize('.FlexEmbed-ratio--2by1') {
+  padding-bottom: 50%;
+}
+
+/**
+ * Modifier: 16:9 aspect ratio
+ */
+
+@include responsivize('.FlexEmbed-ratio--16by9') {
+  padding-bottom: 56.25%;
+}
+
+/**
+ * Modifier: 4:3 aspect ratio
+ */
+
+@include responsivize('.FlexEmbed-ratio--4by3') {
+  padding-bottom: 75%;
+}
+
+/**
+ * Modifier: 5:7 aspect ratio
+ */
+
+@include responsivize('.FlexEmbed-ratio--5by7') {
+  padding-bottom: 140%
+}
+
+/**
+ * Modifier: 4:5 aspect ratio
+ */
+
+@include responsivize('.FlexEmbed-ratio--4by5') {
+  padding-bottom: 125%;
+}
+
+/**
+ * Modifier: 5:4 aspect ratio
+ */
+
+@include responsivize('.FlexEmbed-ratio--5by4') {
+  padding-bottom: 80%;
+}
+
+
+
+/**
+ * Fit the content to the aspect ratio
+ */
+
+.FlexEmbed-content {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

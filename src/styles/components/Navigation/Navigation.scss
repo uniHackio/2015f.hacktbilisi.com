@@ -1,0 +1,50 @@
+.Navigation{
+  position: relative;
+  padding-top: 100em;
+  margin-top: -100em;
+  &:target{
+    .Navigation-menu{
+      display: block;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      margin-top: 1rem
+    }
+    .Navigation-burger{
+      display: none;
+    }
+    .Navigation-close{
+      display: block;
+    }
+  }
+}
+
+.Navigation-burger{
+  display: block;
+}
+
+.Navigation-close{
+  display: none;
+}
+
+.Navigation-menu{
+  display: none;
+}
+
+@include respond-to(l){
+   .Navigation:target .Navigation-menu,
+   .Navigation-menu {
+    display: block;
+    position: static;
+  }
+  
+   .Navigation:target .Navigation-burger,
+   .Navigation-burger {
+    display: none;
+  }
+
+   .Navigation:target .Navigation-close,
+   .Navigation-close {
+    display: none;
+  }
+}

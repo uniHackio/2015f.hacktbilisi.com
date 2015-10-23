@@ -1,0 +1,50 @@
+@mixin Icon($name:false){
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @if($name){
+    content: map-get($_icons,$name)
+  }
+}
+
+.Icon {
+  @include Icon();
+}
+
+$_icons:(
+  minus: "\e800",
+  plus: "\e801",
+  closeAlt: "\e612",
+  close: "\e600",
+  arrowDownAlt: "\e601",
+  arrowDown: "\e602",
+  arrowLeftAlt: "\e603",
+  arrowLeft: "\e604",
+  arrowRightAlt: "\e605",
+  arrowRight: "\e606",
+  arrowUpAlt: "\e607",
+  arrowUp: "\e608",
+  burger: "\e609",
+  handbag: "\e60a",
+  heart: "\e60b",
+  magnifier: "\e60c",
+  user: "\e60d",
+  share: "\e60e",
+  pinterest: "\e60f",
+  facebook: "\e610",
+  twitter: "\e611"
+);
+
+@each $name, $value in $_icons {
+  .Icon--#{$name}:before{
+    content: $value;
+  }
+}

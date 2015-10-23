@@ -1,0 +1,47 @@
+@include utilsGenerator((
+  classes:(
+    marginAll: (margin),
+    marginBottom: (margin-bottom),
+    marginLeft: (margin-left),
+    marginRight: (margin-right),
+    marginTop: (margin-top),
+    marginHorisontal: (margin-left, margin-right),
+    marginVertical: (margin-top,margin-bottom)
+  ),
+  values: map-merge((a:auto,f: 0), spacing()),
+  responsive: true
+));
+
+@include utilsGenerator((
+  classes:(
+    marginNegativeBottom: (margin-bottom),
+    marginNegativeLeft: (margin-left),
+    marginNegativeRight: (margin-right),
+    marginNegativeTop: (margin-top)
+  ),
+  values: (
+    xs: spacing(xs) * (-1),
+    s: spacing(s) * (-1),
+    m: spacing(m) * (-1),
+    l: spacing(l) * (-1),
+    xl: spacing(xl) * (-1),
+    xxl: spacing(xxl) * (-1)
+  ),
+  responsive: true
+));
+
+
+@include utilsGenerator((
+  classes:(
+    shiftTextLeft: (margin-left),
+    shiftTextBottom: (margin-bottom),
+    shiftTextTop: (margin-top),
+    shiftTextRight: (margin-Right),
+  ),
+  values: (
+    full: -0.7em,
+    half: -0.3em,
+    quarter: -0.15em,
+  ),
+  responsive: true
+));
