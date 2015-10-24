@@ -45,26 +45,26 @@ partners = [
 ]
 
 team = [
-  person("gtkesh", t("Giorgi Tkeshelashvili"), t("Georgia Tech"), "/images/team/gtkesh.jpg", [
+  person("gtkesh", t("Giorgi Tkeshelashvili"), t("Co-Director"), "/images/team/gtkesh.jpg", [
     link("facebook", "facebook", "https://www.facebook.com/gtkesh")
     link("twitter", "twitter", "https://twitter.com/gtkesh")
     link("google-plus", "google+", "https://plus.google.com/u/0/+GiorgiTkeshelashvili")
     link("github", "github", "https://github.com/gtkesh")
   ])
-  person("safareli", t("Irakli Safareli"), t("Lord of the Code"), "/images/team/safareli.jpg", [
+  person("safareli", t("Irakli Safareli"), t("Co-Director"), "/images/team/safareli.jpg", [
     link("twitter", "twitter", "https://twitter.com/safareli")
     link("google-plus", "google+", "https://google.com/+IrakliSafareli")
     link("youtube-play", "youtube", "https://www.youtube.com/isafareli")
     link("linkedin", "linkedin", "https://www.linkedin.com/in/safareli")
     link("github", "github", "https://github.com/safareli")
   ])
-  person("otarza", t("Otar Zakalashvili"), t("Technology Agnostic"), "/images/team/otarza.jpeg", [
+  person("otarza", t("Otar Zakalashvili"), t("Director of Operations"), "/images/team/otarza.jpeg", [
     link("facebook", "facebook", "https://www.facebook.com/otarza")
     link("twitter", "twitter", "https://twitter.com/otarza")
     link("linkedin", "linkedin", "https://www.linkedin.com/pub/otar-zakalashvili/15/3a8/547/")
     link("google-plus", "google+", "https://plus.google.com/109734750145229671001")
   ])
-  person("demonno", t("Demur Nodia"), t("wow"), "/images/team/demonno.jpg", [
+  person("demonno", t("Demur Nodia"), t("Special Ops"), "/images/team/demonno.jpg", [
     link("facebook", "facebook", "https://www.facebook.com/demuri.nodia")
     link("twitter", "twitter", "https://twitter.com/demurnodia")
     link("google-plus", "google+", "https://plus.google.com/u/0/+DemurNodia")
