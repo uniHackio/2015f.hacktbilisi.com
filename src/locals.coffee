@@ -64,6 +64,10 @@ team = [
   ])
 ]
 speakers = [
+  person('gmamaladze', t('George Mamaladze', 'გიორგი მამალაძე'), t('Architect at Siemens.'), '/images/speakers/mamaladze.jpeg', [
+    link('twitter', 'twitter', 'https://twitter.com/gmamaladze')
+    link('google-plus', 'google+', 'https://google.com/+GeorgeMamaladze')
+  ]),
   person("safareli", t("Irakli Safareli"), t("Front-End Developer"), "/images/team/safareli.jpg", [
     link("twitter", "twitter", "https://twitter.com/safareli")
     link("google-plus", "google+", "https://google.com/+IrakliSafareli")
