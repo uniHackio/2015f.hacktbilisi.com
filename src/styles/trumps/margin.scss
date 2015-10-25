@@ -29,19 +29,3 @@
   ),
   responsive: true
 ));
-
-
-@include utilsGenerator((
-  classes:(
-    shiftTextLeft: (margin-left),
-    shiftTextBottom: (margin-bottom),
-    shiftTextTop: (margin-top),
-    shiftTextRight: (margin-Right),
-  ),
-  values: (
-    full: -0.7em,
-    half: -0.3em,
-    quarter: -0.15em,
-  ),
-  responsive: true
-));
