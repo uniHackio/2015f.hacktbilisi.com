@@ -110,7 +110,13 @@ module.exports =
       'გუნდი': 'Team'
       'location': 'Location'
       'სპიკერები':'Speakers'
+      'hours' : 'Hours'
+      'hackers' : 'Hackers'
+      'date' : 'December 18-20'
     ka:
+      'hours' : 'საათი'
+      'hackers' : 'მონაწილე'
+      'date' : '18 - 20 დეკემბერი'
       'განრიგი': 'განრიგი'
       'გუნდი': 'გუნდი'
       'location': 'ადგილი'

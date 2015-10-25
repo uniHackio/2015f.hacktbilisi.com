@@ -1,6 +1,6 @@
 include ../includes/icon.jade
 mixin mainNavigationLink(url,target,title)
-  li(class='u-marginLeft-s@l u-display-inlineBlock@l for-' + target)
+  li(class='u-marginLeft-xs@l u-display-inlineBlock@l for-' + target)
     a(href=url)
       span.title=title
 
@@ -11,12 +11,6 @@ mixin mainNavigationLink(url,target,title)
       .Grid-block.Grid-block--weight1
         a.u-display-inlineBlock(href='#home')
           img.u-width-full(src="/images/logoWhite.svg", alt="HackTbilisi")
-      .Grid-block.Grid-block--fit.u-position-relative.u-display-none(class="u-display-block@s")
-        //- spacer
-        div(style="width:70px")
-          a.u-stickTop.u-position-absolute.u-display-block(class="u-marginNegativeTop-s u-marginNegativeTop-m@s u-marginNegativeTop-xl@m" style="width:70px;" href="https://mlh.io/?utm_campaign=Trust%20Badge" target="_blank")
-            img(src="https://s3.amazonaws.com/logged-assets/trust-badge/f2015.png" alt="MLH Official - Fall 2015" style="width:100%;")
-
       .Grid-block.Grid-block--fit
         .Navigation#menu
           a.Navigation-burger(href="#menu")
@@ -31,20 +25,21 @@ mixin mainNavigationLink(url,target,title)
             +mainNavigationLink('#map', 'location' , t('location'))
             //- +mainNavigationLink('/agenda#' + t('languagePrefix'), 'agenda', t('განრიგი'))
             +mainNavigationLink(t('nextLanguage').url, 'nextLanguage', t('nextLanguage').title)  
+      .Grid-block.Grid-block--fit.u-position-relative.u-display-none(class="u-display-block@s")
+        //- spacer
+        div(style="width:70px")
+          a.u-stickTop.u-position-absolute.u-display-block(class="u-marginNegativeTop-s u-marginNegativeTop-m@s u-marginNegativeTop-xl@m" style="width:70px;" href="https://mlh.io/?utm_campaign=Trust%20Badge" target="_blank")
+            img(src="https://s3.amazonaws.com/logged-assets/trust-badge/f2015.png" alt="MLH Official - Fall 2015" style="width:100%;")
         
   .Grid-block.Grid-block--fit(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m")
-    h1.u-textFamily-secondary(class='u-textSize-3xl u-textSize-4xl@s u-textSize-5xl@l')
+    h1.u-marginBottom-s.u-textFamily-secondary(class='u-textSize-3xl u-textSize-4xl@s u-textSize-5xl@l')
       p.u-lineHeight-s
-        span.u-textWeight-bold 72 
-        span.u-textWeight-light საათი
+        span.u-textWeight-bold 36 
+        span.u-textWeight-light=t('hours')
       p.u-lineHeight-s
-        span.u-textWeight-bold 10 
-        span.u-textWeight-light სპიკერი
-      p.u-lineHeight-s
-        span.u-textWeight-bold 3000
-        span ¢ 
-        span.u-textWeight-light საპრიზო
-    h2.u-marginBottom-s.u-textSize-m.u-color-grayDark 18, 19 & 20 დეკემბერი
+        span.u-textWeight-bold 200+ 
+        span.u-textWeight-light=t('hackers')
+    h2.u-marginBottom-s.u-textSize-m.u-color-grayDark=t('date')
     a.u-display-inlineBlock.u-color-red.u-bordered.u-borderWidth-m.u-borderRadius-m.u-paddingVertical-xs.u-paddingHorisontal-s.u-textSize-xl(href="#" target="_blank") #{t('Register')} 
       +icon('long-arrow-right')
 
@@ -65,5 +60,5 @@ mixin mainNavigationLink(url,target,title)
             +icon('google-plus')
           a.u-marginLeft-xs(title=t('%s on %s',['uniHackge', 'youtube']) href='https://www.youtube.com/uniHackge')
             +icon('youtube-play')
-          a.u-marginLeft-xs(title=t('contact us') href='mailto:team@unihack.ge?Subject=wow%20much%20love')
+          a.u-marginLeft-xs(title=t('contact us') href='mailto:team@hacktbilisi.com?Subject=wow%20much%20love')
             +icon('envelope')
