@@ -89,10 +89,10 @@ module.exports =
   defaultLanguageKey: 'en'
   locals:
     en:
-      'META_SITE_URL': 'http://hacktbilisi.com'
-      'META_TITLE': 'hackTBILISI'
-      'META_SITE_NAME': 'hackTbilisi.com'
-      'META_DESCRIPTION': 'Uniting Hackers from Europe and Asia, Tbilisi, Georgia , Dec 19-21 .uniHack',
+      'META_SITE_URL': 'http://2015f.hacktbilisi.com'
+      'META_TITLE': 'HackTbilisi 2015 Fall'
+      'META_SITE_NAME': 'HackTbilisi.com'
+      'META_DESCRIPTION': 'HackTBILISI - #HackathonThatLovesYou - DEC 18-20 - Free University, Tbilisi, Georgia',
 
       'Stay Tuned!': 'Stay Tuned!'
       'Your Email': 'Your Email'
