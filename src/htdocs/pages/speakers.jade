@@ -32,6 +32,5 @@ include ../includes/icon.jade
                           +icon(link.icon)
 
   .Grid-block.Grid-block--fit.u-marginTop-s
-    p.u-textSize-l.u-color-grayLight.u-text-center
-      | Want to be a speaker? 
-      a.u-color-red(href='mailto:team@hacktbilisi.com?Subject=Speaker%20at%20HackTbilisi') contact us
+    p.u-textSize-l.u-color-grayLight.u-text-center=t('want_to_be_speaker')+ ' ' 
+      a.u-color-red(href='mailto:team@hacktbilisi.com?Subject=Speaker%20at%20HackTbilisi')=t('contact us')
