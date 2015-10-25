@@ -3,13 +3,13 @@ mixin sponsorItem(sponsor,sponsorGroupName)
   case sponsorGroupName
     when 'giga'
       a.Grid-block.Grid-block--fit.u-text-center(class="u-size1/1  u-size1/2@m" title=sponsor.name, href=sponsor.href)
-        img(alt=sponsor.name,src=sponsor.image)
+        img.u-width-full(alt=sponsor.name,src=sponsor.image)
     when 'mega'
       a.Grid-block.Grid-block--fit.u-text-center(class="u-size1/2  u-size1/3@m" title=sponsor.name, href=sponsor.href)
-        img(alt=sponsor.name,src=sponsor.image)
+        img.u-width-full(alt=sponsor.name,src=sponsor.image)
     when 'kilo'
       a.Grid-block.Grid-block--fit.u-text-center(class="u-size1/2 u-size1/3@s u-size1/4@m" title=sponsor.name, href=sponsor.href)
-        img(alt=sponsor.name,src=sponsor.image)
+        img.u-width-full(alt=sponsor.name,src=sponsor.image)
   
     
 
@@ -29,16 +29,16 @@ mixin sponsorItem(sponsor,sponsorGroupName)
           +sponsorItem(sponsor, sponsorGroup.name)
 
     if partners.length
-      h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('პარტნიორები')
+      h1.u-marginTop-xxl.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginBottom-s.u-text-center=t('პარტნიორები')
       .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter
         for partner in partners
           a.Grid-block.Grid-block--fit.u-text-center(class="u-size1/1 u-size1/2@s u-size1/3@m u-size1/4@l" title=partner.name, href=partner.href)
-            img(alt=partner.name,src=partner.image)
+            img.u-width-full(alt=partner.name,src=partner.image)
 
 
     if mediaPartners.length
-      h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('მედია პარტნიორები')
+      h1.u-marginTop-xxl.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginBottom-s.u-text-center=t('მედია პარტნიორები')
       .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter
         for mediaPartner in mediaPartners
           a.Grid-block.Grid-block--fit.u-text-center(class="u-size1/1 u-size1/2@s u-size1/3@m u-size1/4@l" title=mediaPartner.name, href=mediaPartner.href)
-            img(alt=mediaPartner.name,src=mediaPartner.image)
+            img.u-width-full(alt=mediaPartner.name,src=mediaPartner.image)
