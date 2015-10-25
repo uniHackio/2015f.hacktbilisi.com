@@ -16,32 +16,24 @@ t = (en,ka)->
   en:en, ka:ka || en
 
 sponsorGroups = [
-  group('giga',[
-    sponsor('BasisBank','http://www.basisbank.ge/','/images/sponsors/basisbank.png')
-  ]),
+  # group('peta',[
+  # ]),
+  # group('tera',[
+  # ]),
+  # group('giga',[
+  # ]),
   group('mega',[
-    sponsor("Alta Software", "http://altasoft.ge", "/images/sponsors/altasoft.png")
-    sponsor("GAU", "http://gau.edu.ge/", "/images/sponsors/gau.jpg")
-    sponsor("APEX", "http://apex.ge", "/images/sponsors/apex.png")
-    sponsor("Mobility", "http://mobility.ge", "/images/sponsors/mobility.png")
-    sponsor("JetBrains", "http://jetbrains.com", "/images/sponsors/jetbrains.png")
+    sponsor("Webintelligence", "http://webintelligence.de", "/images/sponsors/w3i.png")
   ]),
-  group('kilo',[
-    sponsor("B.A.G", "http://bag.ge", "/images/sponsors/bag.png")
-    sponsor("AZRY", "http://azry.com", "/images/sponsors/azri.png")
-    sponsor("Money Movers", "http://mm.ge", "/images/sponsors/mm.png")
-  ])
+  # group('kilo',[
+  # ])
 ]
 
 
 mediaPartners = [
-  partner('ideahub',"http://ideahub.ge","/images/sponsors/idea.png")
-  partner('Marketer',"http://marketer.ge","/images/sponsors/marketer.png")
-  partner('tabula',"http://tabula.ge","/images/sponsors/tabula.png")
 ]
 
 partners = [
-  partner('GitHub','http://github.com','/images/sponsors/github.png')
 ]
 
 team = [

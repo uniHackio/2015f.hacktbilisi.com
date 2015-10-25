@@ -1,44 +1,54 @@
 
-mixin sponsorItem(sponsor,sponsorGroupName)
-  case sponsorGroupName
+mixin sizer(sponsor,sizeName)
+  case sizeName
+    when 'peta'
+      a.Grid-block.Grid-block--fit.u-text-center(class="u-size12/12 u-size8/12@s u-size6/12@l" title=sponsor.name, href=sponsor.href)
+        img.u-width-full(alt=sponsor.name,src=sponsor.image)
+    when 'tera'
+      a.Grid-block.Grid-block--fit.u-text-center(class="u-size8/12 u-size6/12@s u-size5/12@l" title=sponsor.name, href=sponsor.href)
+        img.u-width-full(alt=sponsor.name,src=sponsor.image)
     when 'giga'
-      a.Grid-block.Grid-block--fit.u-text-center(class="u-size1/1  u-size1/2@m" title=sponsor.name, href=sponsor.href)
+      a.Grid-block.Grid-block--fit.u-text-center(class="u-size6/12 u-size5/12@s u-size4/12@l" title=sponsor.name, href=sponsor.href)
         img.u-width-full(alt=sponsor.name,src=sponsor.image)
     when 'mega'
-      a.Grid-block.Grid-block--fit.u-text-center(class="u-size1/2  u-size1/3@m" title=sponsor.name, href=sponsor.href)
+      a.Grid-block.Grid-block--fit.u-text-center(class="u-size5/12  u-size4/12@s u-size3/12@l" title=sponsor.name, href=sponsor.href)
         img.u-width-full(alt=sponsor.name,src=sponsor.image)
     when 'kilo'
-      a.Grid-block.Grid-block--fit.u-text-center(class="u-size1/2 u-size1/3@s u-size1/4@m" title=sponsor.name, href=sponsor.href)
+      a.Grid-block.Grid-block--fit.u-text-center(class="u-size4/12  u-size3/12@s u-size2/12@l" title=sponsor.name, href=sponsor.href)
         img.u-width-full(alt=sponsor.name,src=sponsor.image)
   
     
 
-.u-heightMin-vFull.u-background-whitish.u-color-blackish.u-position-relative(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m")
-  .Grid.Grid--gutterWide.Grid--spaceBetween.Grid--alignCenter
-    .Grid-block.Grid-block--weight1
-      a.u-display-inlineBlock(href='#home')
-        img.u-width-full(src="/images/logoColored.svg", alt="HackTbilisi")
-    .Grid-block.Grid-block--fit
-        a.u-display-inlineBlock(href="#menu")
-          +icon('bars')
-  .Content
-    h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('სპონსორები')
-    for sponsorGroup in sponsorGroups
-      .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter
-        for sponsor in sponsorGroup.sponsors
-          +sponsorItem(sponsor, sponsorGroup.name)
+.Grid.Grid--directionCol.Grid--spaceBetween.u-heightMin-vFull.u-background-whitish.u-color-blackish.u-position-relative(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m")
+  .Grid-block.Grid-block--fit
+    .Grid.Grid--gutterWide.Grid--spaceBetween.Grid--alignCenter
+      .Grid-block.Grid-block--weight1
+        a.u-display-inlineBlock(href='#home')
+          img.u-width-full(src="/images/logoColored.svg", alt="HackTbilisi")
+      .Grid-block.Grid-block--fit
+          a.u-display-inlineBlock(href="#menu")
+            +icon('bars')
+    .Content
+      h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('სპონსორები')
+      for sponsorGroup in sponsorGroups
+        .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter
+          for sponsor in sponsorGroup.sponsors
+            +sizer(sponsor, sponsorGroup.name)
 
-    if partners.length
-      h1.u-marginTop-xxl.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginBottom-s.u-text-center=t('პარტნიორები')
-      .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter
-        for partner in partners
-          a.Grid-block.Grid-block--fit.u-text-center(class="u-size1/1 u-size1/2@s u-size1/3@m u-size1/4@l" title=partner.name, href=partner.href)
-            img.u-width-full(alt=partner.name,src=partner.image)
+      if partners.length
+        h1.u-marginTop-xxl.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginBottom-s.u-text-center=t('პარტნიორები')
+        .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter
+          for partner in partners
+            +sizer(partner, 'mega')
 
 
-    if mediaPartners.length
-      h1.u-marginTop-xxl.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginBottom-s.u-text-center=t('მედია პარტნიორები')
-      .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter
-        for mediaPartner in mediaPartners
-          a.Grid-block.Grid-block--fit.u-text-center(class="u-size1/1 u-size1/2@s u-size1/3@m u-size1/4@l" title=mediaPartner.name, href=mediaPartner.href)
-            img.u-width-full(alt=mediaPartner.name,src=mediaPartner.image)
+      if mediaPartners.length
+        h1.u-marginTop-xxl.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginBottom-s.u-text-center=t('მედია პარტნიორები')
+        .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter
+          for mediaPartner in mediaPartners
+            +sizer(mediaPartner, 'kilo')
+  
+  .Grid-block.Grid-block--fit.u-marginTop-s
+    p.u-textSize-l.u-color-grayDarker.u-text-center
+      | Want to partner with us? 
+      a.u-color-red(href='mailto:sponsor@hacktbilisi.com?Subject=We%20should%20be%20partner') contact us
