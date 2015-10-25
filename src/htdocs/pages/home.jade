@@ -1,8 +1,8 @@
 include ../includes/icon.jade
 mixin mainNavigationLink(url,target,title)
-  li(class='u-marginLeft-xs@l u-display-inlineBlock@l for-' + target)
+  li(class='u-marginLeft-xs@l u-display-inlineBlock@l for-' + target)&attributes(attributes)
     a(href=url)
-      span.title=title
+      span.u-textFamily-secondary=title
 
 .Grid.Grid--directionCol.Grid--spaceBetween.u-heightMin-vFull.u-color-blueLight.u-position-relative
   .u-position-absolute.u-stickTop.u-stickLeft.u-stickRight.u-stickBottom.u-zIndex-alpha#main-background(style="background:url('/images/background.png') center;background-size:cover")
@@ -12,7 +12,7 @@ mixin mainNavigationLink(url,target,title)
         a.u-display-inlineBlock(href='#home')
           img.u-width-full(src="/images/logoWhite.svg", alt="HackTbilisi")
       .Grid-block.Grid-block--fit
-        .Navigation#menu
+        .Navigation.u-textUppercase#menu
           a.Navigation-burger(href="#menu")
             +icon('bars')
           a.Navigation-close(href="#home")
@@ -24,7 +24,7 @@ mixin mainNavigationLink(url,target,title)
             +mainNavigationLink('#team', 'team' , t('გუნდი'))
             +mainNavigationLink('#map', 'location' , t('location'))
             //- +mainNavigationLink('/agenda#' + t('languagePrefix'), 'agenda', t('განრიგი'))
-            +mainNavigationLink(t('nextLanguage').url, 'nextLanguage', t('nextLanguage').title)  
+            +mainNavigationLink(t('nextLanguage').url, 'nextLanguage', t('nextLanguage').title)(lang="en")
       .Grid-block.Grid-block--fit.u-position-relative.u-display-none(class="u-display-block@s")
         //- spacer
         div(style="width:70px")
@@ -39,7 +39,7 @@ mixin mainNavigationLink(url,target,title)
       p.u-lineHeight-s
         span.u-textWeight-bold 200+ 
         span.u-textWeight-light=t('hackers')
-    h2.u-marginBottom-s.u-textSize-m.u-color-grayDark=t('date')
+    h2.u-marginBottom-s.u-textSize-xl.u-color-grayLight.u-textUppercase=t('date')
     a.u-display-inlineBlock.u-color-red.u-bordered.u-borderWidth-m.u-borderRadius-m.u-paddingVertical-xs.u-paddingHorisontal-s.u-textSize-xl(href="#" target="_blank") #{t('Register')} 
       +icon('long-arrow-right')
 
