@@ -18,8 +18,14 @@ $_font: (
     xl: 2
   ),
   family: (
-    primary: 'DejaVuNeue',
-    secondary: 'DejaVuNeueCaps'
+    primary: (
+      ka: 'DejaVuNeue',
+      en: '"Sanchez", serif'
+    ),
+    secondary: (
+      ka: 'DejaVuNeueCaps',
+      en: '"Questrial", sans-serif'
+    )
   ),
   weight: (
     light: 100,
@@ -27,12 +33,18 @@ $_font: (
     bold: 700
   ),
   faces: (
-    font-face('DejaVu Neue', 'DejaVuNeue-ExtraLight', 100, normal),
-    font-face('DejaVu Neue', 'DejaVuNeue', 400, normal),
-    font-face('DejaVu Neue', 'DejaVuNeue-Bold', 700, normal),
-    font-face('DejaVu Neue Caps', 'DejaVuNeueCaps-ExtraLight', 100, normal),
-    font-face('DejaVu Neue Caps', 'DejaVuNeueCaps', 400, normal),
-    font-face('DejaVu Neue Caps', 'DejaVuNeueCaps-Bold', 700, normal)
+    // ka:(
+      font-face('DejaVu Neue', 'DejaVuNeue-ExtraLight', 100, normal),
+      font-face('DejaVu Neue', 'DejaVuNeue', 400, normal),
+      font-face('DejaVu Neue', 'DejaVuNeue-Bold', 700, normal),
+      font-face('DejaVu Neue Caps', 'DejaVuNeueCaps-ExtraLight', 100, normal),
+      font-face('DejaVu Neue Caps', 'DejaVuNeueCaps', 400, normal),
+      font-face('DejaVu Neue Caps', 'DejaVuNeueCaps-Bold', 700, normal)
+    // ),
+    // en:(
+    //   font-face-web('//fonts.googleapis.com/css?family=Questrial'),
+    //   font-face-web('//fonts.googleapis.com/css?family=Sanchez')
+    // )
   ),
   default: (
     size: m,

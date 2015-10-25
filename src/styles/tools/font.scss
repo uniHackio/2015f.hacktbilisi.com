@@ -1,16 +1,28 @@
 @function font-face($values...) {
   @return map-zip((family, file, weight, style), $values);
 }
+@function font-face-web($values...) {
+  @return map-zip((url), $values);
+}
+
+@mixin web-font($path){
+  //node-sass throws error: @import directives are not allowed inside mixins and functions
+  // @import url("#{$path}");
+}
 
 @mixin font-face($face, $path: 'fonts/') {
-  $face: map-merge(( weight: normal, style: normal), $face);
-  @font-face{
-    font-family: map-get($face,family);
-    src: url('#{$path}#{map-get($face, file)}.eot'); // IE9 Compat Modes
-    src: url('#{$path}#{map-get($face, file)}.eot?#iefix') format('embedded-opentype'), // IE6-IE-2
-         url('#{$path}#{map-get($face, file)}.woff') format('woff'), // Pretty Modern Browsers
-         url('#{$path}#{map-get($face, file)}.ttf')  format('truetype'); // Safari, Android, iOS
-    font-weight: map-get($face, weight);
-    font-style: map-get($face, style);
+  @if (map-has-key($face,url)) {
+    @include web-font(map-get($face,url));
+  } @else {
+    $face: map-merge(( weight: normal, style: normal), $face);
+    @font-face{
+      font-family: map-get($face,family);
+      src: url('#{$path}#{map-get($face, file)}.eot'); // IE9 Compat Modes
+      src: url('#{$path}#{map-get($face, file)}.eot?#iefix') format('embedded-opentype'), // IE6-IE-2
+           url('#{$path}#{map-get($face, file)}.woff') format('woff'), // Pretty Modern Browsers
+           url('#{$path}#{map-get($face, file)}.ttf')  format('truetype'); // Safari, Android, iOS
+      font-weight: map-get($face, weight);
+      font-style: map-get($face, style);
+    }
   }
 }

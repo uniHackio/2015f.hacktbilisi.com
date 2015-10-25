@@ -1,0 +1,11 @@
+@mixin poliglotify($prop, $poliglotValue){
+  @if(type-of($poliglotValue) == 'map'){
+    @each $key, $value in $poliglotValue {
+      :lang(#{$key}) &{
+        #{$prop}: #{$value};
+      }
+    }
+  } @else{
+    #{$prop}: #{$poliglotValue};
+  }
+}

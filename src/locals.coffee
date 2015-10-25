@@ -128,6 +128,7 @@ module.exports =
       'contact us':'contact us'
       'nextLanguage': language('/','GEO')
       'languagePrefix': 'en'
+      'languageKey': 'en'
       '%s on %s': '%s on %s'
       'Register': 'Register'
       'კითხვები': 'F.A.Q'
@@ -154,6 +155,7 @@ module.exports =
       'contact us':'დაგვიკავშირდით'
       'nextLanguage': language('/en','ENG')
       'languagePrefix': ''
+      'languageKey': 'ka'
       '%s on %s': '%s %s-ზე'
       'Stay Tuned!': 'გამოიწერე!'
       'Your Email': 'თქვენი ელ-ფოსტა'

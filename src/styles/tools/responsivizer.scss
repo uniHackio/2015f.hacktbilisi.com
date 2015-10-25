@@ -37,7 +37,9 @@
   }
 
 }
-
+@function important($val){
+  @return unquote($val + ' '+ !important)
+}
 @mixin utilsGenerator($settings){
   $settings: map-merge((responsive: false, seperator: "-", prefix: '.u-', important:true), $settings);
   @each $name, $props in map-get($settings, classes) {
@@ -47,11 +49,19 @@
         $seperator: ''
       }
       @include responsivize(#{map-get($settings, prefix)}#{$name}#{$seperator}#{$valueName}, $responsive:map-get($settings, responsive)) {
-        @each $prop in $props {
-          @if(map-get($settings, important)){
-            #{$prop}: $value !important;
-          } @else{
-            #{$prop}: $value;
+        @each $prop in $props {          
+          @if type-of($value) == 'map'{
+            @if(map-get($settings, important)){
+              @include poliglotify($prop, map-walk($value,important));
+            } @else{
+              @include poliglotify($prop, $value); 
+            }
+          }@else{
+            @if(map-get($settings, important)){
+              #{$prop}: $value !important;
+            } @else{
+              #{$prop}: $value;
+            }
           }
         }
       }

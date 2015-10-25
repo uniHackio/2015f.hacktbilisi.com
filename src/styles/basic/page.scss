@@ -27,7 +27,7 @@ html {
 }
 
 body{
-  font-family: base(fontFamily);
+  @include poliglotify(font-family, base(fontFamily));
   font-weight: base(fontWeight);
   font-size: rem(base(fontSize));
   line-height: base(lineHeight);
