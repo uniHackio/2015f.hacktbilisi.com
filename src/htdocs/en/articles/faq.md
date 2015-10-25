@@ -12,9 +12,10 @@ You can use our [facebook event page](http://goo.gl/3YH8Kx) to find teammates or
 
 
 ### What should I bring with me? 
-**College hackers :** Your student ID card.<br>
-**High school hackers :** Any official document from school that shows you are an active student. <br>
-**Everyone :** Laptop, chargers, Rubik's Cube and anything you need to feel comfortable during the hackathon. 
+
+- **College hackers :** Your student ID card.<br>
+- **High school hackers :** Any official document from school that shows you are an active student. <br>
+- **Everyone :** Laptop, chargers, Rubik's Cube and anything you need to feel comfortable during the hackathon. 
 
 
 
