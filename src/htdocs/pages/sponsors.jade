@@ -49,6 +49,5 @@ mixin sizer(sponsor,sizeName)
             +sizer(mediaPartner, 'kilo')
   
   .Grid-block.Grid-block--fit.u-marginTop-s
-    p.u-textSize-l.u-color-grayDarker.u-text-center
-      | Want to partner with us? 
-      a.u-color-red(href='mailto:sponsor@hacktbilisi.com?Subject=We%20should%20be%20partner') contact us
+    p.u-textSize-l.u-color-grayDarker.u-text-center=t('want_to_be_partner')+ ' '
+      a.u-color-red(href='mailto:sponsor@hacktbilisi.com?Subject=We%20should%20be%20partner')=t('contact us')

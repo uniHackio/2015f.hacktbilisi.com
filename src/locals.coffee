@@ -113,7 +113,9 @@ module.exports =
       'hours' : 'Hours'
       'hackers' : 'Hackers'
       'date' : 'December 18-20'
+      'want_to_be_partner' : 'Want to partner with us?'
     ka:
+      'want_to_be_partner' : 'გსურთ ჩვენთან პარტნიორობა?'
       'hours' : 'საათი'
       'hackers' : 'მონაწილე'
       'date' : '18 - 20 დეკემბერი'
