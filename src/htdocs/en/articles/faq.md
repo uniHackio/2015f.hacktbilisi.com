@@ -42,6 +42,6 @@ hackTBILISI is run by [UniHack](http://unihack.io).
 ### Where should I come?
 hackTBILISI is hosted by Free University of Tbilisi.
 
-### "Do you provide travel reimbursements?"
+### Do you provide travel reimbursements?
 We can't promise anything at the moment but we're working hard on that! Keep an eye on our FB page for updates!
 
