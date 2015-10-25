@@ -6,6 +6,7 @@ uniform float nearClipping, farClipping;
 
 uniform float pointSize;
 uniform float zOffset;
+uniform float scale;
 
 varying vec2 vUv;
 varying float depth;
@@ -25,7 +26,7 @@ void main() {
 
   // Projection code by @kcmic
 
-  float z = depth * (farClipping - nearClipping) + nearClipping;
+  float z = depth * scale * (farClipping - nearClipping) + nearClipping;
 
   vec4 pos = vec4(
     ( position.x / width - 0.5 ) * z * XtoZ,

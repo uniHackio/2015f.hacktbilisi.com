@@ -6,7 +6,7 @@ var geometry, cube, mesh, material;
 var mouse, center;
 var animationId;
 var width, height;
-var nearClipping, farClipping, zOffset;
+var nearClipping, farClipping, zOffset, scale;
 var texture, t;
 
 
@@ -35,7 +35,7 @@ function init() {
   texture = new THREE.ImageUtils.loadTexture( '/images/tbilisi.jpg' );
 
   width = 640, height = 480;
-  nearClipping = 5000, farClipping = 3500, zOffset = 1500;
+  nearClipping = 5000, farClipping = 3500, zOffset = 1500, scale = 1;
   
 
   geometry = new THREE.Geometry();
@@ -61,7 +61,8 @@ function init() {
       "farClipping": { type: "f", value: farClipping },
 
       "pointSize": { type: "f", value: 2 },
-      "zOffset": { type: "f", value: zOffset }
+      "zOffset": { type: "f", value: zOffset },
+      "scale": { type: "f", value: scale }
 
     },
     vertexShader: require('./sketch.vert'),
@@ -118,8 +119,7 @@ function render() {
   camera.position.x += ( mouse.x - camera.position.x ) * 0.05;
   camera.position.y += ( - mouse.y - camera.position.y ) * 0.05;
   t += 0.025
-  material.uniforms.zOffset.value = zOffset + Math.sin(t)*50
-  // camera.position.z = 0
+  material.uniforms.scale.value = 1 + Math.sin(t)*0.1
   camera.lookAt( center );
 
   renderer.render( scene, camera );
