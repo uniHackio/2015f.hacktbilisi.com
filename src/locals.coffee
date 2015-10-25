@@ -137,10 +137,12 @@ module.exports =
       'Free university of Tbilisi': 'Free university of Tbilisi'
       'განრიგი': 'Agenda'
       'გუნდი': 'Team'
+      'location': 'Location'
       'სპიკერები':'Speakers'
     ka:
       'განრიგი': 'განრიგი'
       'გუნდი': 'გუნდი'
+      'location': 'ადგილი'
       'სპიკერები':'სპიკერები'
       'Free university of Tbilisi': 'თავისუფალი უნივერსიტეტი'
       'პარტნიორები': 'პარტნიორები'

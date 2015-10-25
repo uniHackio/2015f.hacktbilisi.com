@@ -1,0 +1,14 @@
+.u-heightMin-vFull.u-background-whitish.u-color-blueDark.u-position-relative
+  #maprect.u-display-block.u-width-full.u-heightMin-vFull
+  .Grid.Grid--gutterWide.Grid--spaceBetween.Grid--alignCenter.u-position-absolute.u-stickTop.u-stickLeft.u-stickRight.u-noneInteractive(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m")
+    .Grid-block.Grid-block--weight1
+      a.u-display-inlineBlock.u-interactive(href='#home')
+        img.u-width-full(src="/images/logoColored.svg", alt="HackTbilisi")
+    .Grid-block.Grid-block--fit
+        a.u-display-inlineBlock.u-interactive(href="#menu")
+          +icon('bars')
+script. 
+  L.mapbox.accessToken = 'pk.eyJ1IjoidGVhbS11bmloYWNrIiwiYSI6ImNpZzZlbmQ4ejU3YW51NG0zY3h3bnk2MG8ifQ.uSqNJWlrvI_XGYvtyXtHMw'
+  var map = L.mapbox.map('maprect', 'team-unihack.o03kg3mg', { zoomControl: false })
+  map.scrollWheelZoom.disable();
+  new L.Control.Zoom({ position: 'bottomleft' }).addTo(map)

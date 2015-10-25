@@ -18,6 +18,11 @@
   user-select: none;
 }
 
+.u-interactive{
+  pointer-events: auto;
+  user-select: all; 
+}
+
 .u-outlineNone:focus{
   outline: none;
 }
