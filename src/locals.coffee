@@ -64,34 +64,12 @@ team = [
   ])
 ]
 speakers = [
-  person('gmamaladze', t('George Mamaladze', 'გიორგი მამალაძე'), t('Architect at Siemens.'), '/images/speakers/mamaladze.jpeg', [
-    link('twitter', 'twitter', 'https://twitter.com/gmamaladze')
-    link('google-plus', 'google+', 'https://google.com/+GeorgeMamaladze')
-  ]),
-  person('gmamaladze', t('George Mamaladze', 'გიორგი მამალაძე'), t('Architect at Siemens.'), '/images/speakers/mamaladze.jpeg', [
-    link('twitter', 'twitter', 'https://twitter.com/gmamaladze')
-    link('google-plus', 'google+', 'https://google.com/+GeorgeMamaladze')
-  ]),
-  person('gmamaladze', t('George Mamaladze', 'გიორგი მამალაძე'), t('Architect at Siemens.'), '/images/speakers/mamaladze.jpeg', [
-    link('twitter', 'twitter', 'https://twitter.com/gmamaladze')
-    link('google-plus', 'google+', 'https://google.com/+GeorgeMamaladze')
-  ]),
-  person('rimnadze', t('Rezo Imnadze', 'რეზო იმნაძე'), t('Qarva'), '/images/speakers/imnadze.jpeg', [
-    
-  ]),
-  person('gmamaladze', t('George Mamaladze', 'გიორგი მამალაძე'), t('Architect at Siemens.'), '/images/speakers/mamaladze.jpeg', [
-    link('twitter', 'twitter', 'https://twitter.com/gmamaladze')
-    link('google-plus', 'google+', 'https://google.com/+GeorgeMamaladze')
-  ]),
-  person('gmamaladze', t('George Mamaladze', 'გიორგი მამალაძე'), t('Architect at Siemens.'), '/images/speakers/mamaladze.jpeg', [
-    link('twitter', 'twitter', 'https://twitter.com/gmamaladze')
-    link('google-plus', 'google+', 'https://google.com/+GeorgeMamaladze')
-  ]),
-  person('shgiorgobiani', t('Shota Giorgobiani', 'შოთა გიორგობიანი'), t('Deputy Director at UGT.'), '/images/speakers/giorgobiani.jpg', [
-    link('twitter', 'twitter', 'https://twitter.com/shgiorgobiani')
-  ]),
-  person('nnanitashvili', t('Ninutsa Nanitashvili', 'ნინუცა ნანიტაშვილი'), t('Manager at GDG Tbilisi.'), '/images/speakers/nanitashvili.jpg', [
-    link('twitter', 'twitter', 'https://twitter.com/NinoNanitashvil')
+  person("safareli", t("Irakli Safareli"), t("Front-End Developer"), "/images/team/safareli.jpg", [
+    link("twitter", "twitter", "https://twitter.com/safareli")
+    link("google-plus", "google+", "https://google.com/+IrakliSafareli")
+    link("youtube-play", "youtube", "https://www.youtube.com/isafareli")
+    link("linkedin", "linkedin", "https://www.linkedin.com/in/safareli")
+    link("github", "github", "https://github.com/safareli")
   ])
 ]
 
