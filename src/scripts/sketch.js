@@ -115,7 +115,6 @@ function animate() {
 }
 
 function render() {
-  // var tsin = (1+Math.sin(Date.now()))/2
   camera.position.x += ( mouse.x - camera.position.x ) * 0.05;
   camera.position.y += ( - mouse.y - camera.position.y ) * 0.05;
   t += 0.025

@@ -1,4 +1,4 @@
-sketch = require './sketch'
+sketch = require('./sketch')
 sketch.init()
 sketch.animate()
 
