@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/unihackge/2015f.hacktbilisi.com.git"
+    "url": "git://github.com/unihackio/2015f.hacktbilisi.com.git"
   },
   "browserify": {
     "transform": [
       "coffeeify"
     ]
   },
-  "author": "unihackge",
+  "author": "unihackio",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/unihackge/2015f.hacktbilisi.com/issues"
+    "url": "https://github.com/unihackio/2015f.hacktbilisi.com/issues"
   },
-  "homepage": "https://github.com/unihackge/2015f.hacktbilisi.com",
+  "homepage": "https://github.com/unihackio/2015f.hacktbilisi.com",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "browserify": "^5.10.1",
