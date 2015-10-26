@@ -119,7 +119,9 @@ module.exports =
       'date' : 'December 18-20'
       'want_to_be_partner' : 'Want to partner with us?'
       'want_to_be_speaker' : 'Want to be a speaker?'
+      'register_url' : 'https://hacktbilisi.typeform.com/to/v1fGHo'
     ka:
+      'register_url' : 'https://hacktbilisi.typeform.com/to/nfRq9x'
       'want_to_be_speaker' : 'გსურთ იყოთ სპიკერი?'
       'want_to_be_partner' : 'გსურთ ჩვენთან პარტნიორობა?'
       'hours' : 'საათი'
