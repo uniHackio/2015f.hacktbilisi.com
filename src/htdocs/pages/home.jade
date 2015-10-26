@@ -40,8 +40,10 @@ mixin mainNavigationLink(url,target,title)
         span.u-textWeight-bold 200+ 
         span.u-textWeight-light=t('hackers')
     h2.u-marginBottom-s.u-textSize-xl.u-color-grayLight.u-textUppercase=t('date')
-    a.u-display-inlineBlock.u-color-red.u-bordered.u-borderWidth-m.u-borderRadius-m.u-paddingVertical-xs.u-paddingHorisontal-s.u-textSize-xl(href=t('register_url') target="_blank") #{t('Register')} 
+    a.u-display-inlineBlock.u-color-red.u-bordered.u-borderWidth-m.u-borderRadius-m.u-paddingVertical-xs.u-paddingHorisontal-s.u-textSize-xl.typeform-share(href=t('register_url') data-mode="1"  target="_blank") #{t('Register')} 
       +icon('long-arrow-right')
+    script.
+      (function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()
 
   .Grid-block.Grid-block--fit(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m")
     .Grid.Grid--spaceBetween.Grid--wrap.Grid--gutterWide
