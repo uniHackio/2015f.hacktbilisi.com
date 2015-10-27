@@ -2,20 +2,20 @@
 mixin sizer(sponsor,sizeName)
   case sizeName
     when 'peta'
-      a.Grid-block.Grid-block--fit.u-text-center(class="u-size12/12 u-size8/12@s u-size6/12@l" title=sponsor.name, href=sponsor.href)
-        img.u-width-full(alt=sponsor.name,src=sponsor.image)
+      .Grid-block.Grid-block--fit.u-text-center(class="u-size12/12 u-size8/12@s u-size6/12@l")
+        a.u-display-block(title=sponsor.name, href=sponsor.href style="height: 250px; background: url("+sponsor.image+") no-repeat center; background-size: contain;")
     when 'tera'
-      a.Grid-block.Grid-block--fit.u-text-center(class="u-size8/12 u-size6/12@s u-size5/12@l" title=sponsor.name, href=sponsor.href)
-        img.u-width-full(alt=sponsor.name,src=sponsor.image)
+      .Grid-block.Grid-block--fit.u-text-center(class="u-size8/12 u-size6/12@s u-size5/12@l")
+        a.u-display-block(title=sponsor.name, href=sponsor.href style="height: 250px; background: url("+sponsor.image+") no-repeat center; background-size: contain;")
     when 'giga'
-      a.Grid-block.Grid-block--fit.u-text-center(class="u-size6/12 u-size5/12@s u-size4/12@l" title=sponsor.name, href=sponsor.href)
-        img.u-width-full(alt=sponsor.name,src=sponsor.image)
+      .Grid-block.Grid-block--fit.u-text-center(class="u-size6/12 u-size5/12@s u-size4/12@l")
+        a.u-display-block(title=sponsor.name, href=sponsor.href style="height: 150px; background: url("+sponsor.image+") no-repeat center; background-size: contain;")
     when 'mega'
-      a.Grid-block.Grid-block--fit.u-text-center(class="u-size5/12  u-size4/12@s u-size3/12@l" title=sponsor.name, href=sponsor.href)
-        img.u-width-full(alt=sponsor.name,src=sponsor.image)
+      .Grid-block.Grid-block--fit.u-text-center(class="u-size5/12  u-size4/12@s u-size3/12@l")
+        a.u-display-block(title=sponsor.name, href=sponsor.href style="height: 100px; background: url("+sponsor.image+") no-repeat center; background-size: contain;")
     when 'kilo'
-      a.Grid-block.Grid-block--fit.u-text-center(class="u-size4/12  u-size3/12@s u-size2/12@l" title=sponsor.name, href=sponsor.href)
-        img.u-width-full(alt=sponsor.name,src=sponsor.image)
+      .Grid-block.Grid-block--fit.u-text-center(class="u-size4/12  u-size3/12@s u-size2/12@l")
+        a.u-display-block(title=sponsor.name, href=sponsor.href style="height: 70px; background: url("+sponsor.image+") no-repeat center; background-size: contain;")
   
     
 
