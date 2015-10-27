@@ -31,7 +31,7 @@ mixin sizer(sponsor,sizeName)
     .Content
       h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('სპონსორები')
       for sponsorGroup in sponsorGroups
-        .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter
+        .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter.u-marginBottom-s
           for sponsor in sponsorGroup.sponsors
             +sizer(sponsor, sponsorGroup.name)
 
