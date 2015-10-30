@@ -20,8 +20,9 @@ sponsorGroups = [
   # ]),
   # group('tera',[
   # ]),
-  # group('giga',[
-  # ]),
+  group('giga',[
+    sponsor("Redberry", "http://redberry.ge/", "/images/sponsors/redberry.svg")
+  ]),
   group('mega',[
     sponsor("Webintelligence", "http://webintelligence.de", "/images/sponsors/w3i.png")
     sponsor("Alta Software", "http://altasoft.ge", "/images/sponsors/altasoftware.svg")
@@ -33,9 +34,13 @@ sponsorGroups = [
 
 
 mediaPartners = [
+  sponsor("DOU hackathon", "http://hack.dou.ua/", "/images/sponsors/DOU_Hackaton_revolution_big.svg")
+  sponsor("IT KPI", "http://itkpi.pp.ua ", "/images/sponsors/it_kpi.svg")
 ]
 
 partners = [
+  sponsor("Major League Hacking", "http://mlh.io", "/images/sponsors/mlh.svg")
+  sponsor("Bloomberg Business", "http://bloomberg.com", "/images/sponsors/bloomberg.svg")
 ]
 
 team = [
