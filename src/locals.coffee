@@ -41,6 +41,7 @@ mediaPartners = [
 partners = [
   sponsor("Major League Hacking", "http://mlh.io", "/images/sponsors/mlh.svg")
   sponsor("Bloomberg Business", "http://bloomberg.com", "/images/sponsors/bloomberg.svg")
+  sponsor("IHUB Tbilisi", "https://www.facebook.com/IHUB-Tbilisi-863627120411270", "/images/sponsors/ihub.svg")
 ]
 
 team = [
