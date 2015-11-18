@@ -18,14 +18,16 @@ t = (en,ka)->
 sponsorGroups = [
   # group('peta',[
   # ]),
-  # group('tera',[
-  # ]),
+  group('tera',[
+    sponsor("Shift", "http://driveshift.com/", "/images/sponsors/shift.svg")
+  ]),
   group('giga',[
     sponsor("Redberry", "http://redberry.ge/", "/images/sponsors/redberry.svg")
   ]),
   group('mega',[
     sponsor("Webintelligence", "http://webintelligence.de", "/images/sponsors/w3i.png")
     sponsor("Alta Software", "http://altasoft.ge", "/images/sponsors/altasoftware.svg")
+    sponsor("AzRy", "http://azry.com", "/images/sponsors/azry.png")
   ]),
   group('kilo',[
     sponsor("JetBrains", "http://jetbrains.com", "/images/sponsors/jetbrains.png")
@@ -87,7 +89,7 @@ speakers = [
 
 
 
-module.exports = 
+module.exports =
   data:
     sponsorGroups: sponsorGroups
     mediaPartners: mediaPartners
