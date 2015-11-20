@@ -28,6 +28,7 @@ sponsorGroups = [
     sponsor("Webintelligence", "http://webintelligence.de", "/images/sponsors/w3i.png")
     sponsor("Alta Software", "http://altasoft.ge", "/images/sponsors/altasoftware.svg")
     sponsor("AzRy", "http://azry.com", "/images/sponsors/azry.png")
+    sponsor("Vivus.ge", "http://vivus.ge", "/images/sponsors/vivus.svg")
   ]),
   group('kilo',[
     sponsor("JetBrains", "http://jetbrains.com", "/images/sponsors/jetbrains.png")
