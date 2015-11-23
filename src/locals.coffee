@@ -87,12 +87,13 @@ speakers = [
     link("linkedin", "linkedin", "https://www.linkedin.com/in/shotagiorgobiani")
   ]),
   person('ratigelashvili', t('Rati Gelashvili', 'რატი გელაშვილი'), t('Ph.D. Student at MIT, Multicore Algorithmics Group'), '/images/speakers/rati.jpg', [
-    link('paper-plane', 'MIT', 'http://web.mit.edu/gelash/www/')
+    link('paper-plane', 'mit.edu', 'http://web.mit.edu/gelash/www/')
     link('facebook', 'facebook', 'https://www.facebook.com/rati.gelashvili')
   ]),
   person('otomeskhy', t('Oto Meskhy', 'ოთო მესხი'), t('Full Stack Developer / Software Architect'), '/images/speakers/meskhy.jpeg', [
-    link('paper-plane', 'MIT', 'http://web.mit.edu/gelash/www/')
-    link('facebook', 'facebook', 'https://www.facebook.com/rati.gelashvili')
+    link('paper-plane', 'otomeskhy.com', 'http://otomeskhy.com')
+    link('twitter', 'twitter', 'http://twitter.com/otomeskhy')
+    link('linkedin', 'linkedin', 'http://linkedin.com/in/otomeskhy')
   ]),
   person('guramkajaia', t('Guram Kajaia', 'გურამ ქაჯაია'), t('Software Developer at SHIFT'), '/images/speakers/kajaia.jpg', [
     link('linkedin', 'linkedin', 'https://www.linkedin.com/in/guramkajaia')
