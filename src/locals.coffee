@@ -88,6 +88,10 @@ speakers = [
     link('paper-plane', 'MIT', 'http://web.mit.edu/gelash/www/')
     link('facebook', 'facebook', 'https://www.facebook.com/rati.gelashvili')
   ]),
+  person('otomeskhy', t('Oto Meskhy', 'ოთო მესხი'), t('Full Stack Developer / Software Architect'), '/images/speakers/meskhy.jpeg', [
+    link('paper-plane', 'MIT', 'http://web.mit.edu/gelash/www/')
+    link('facebook', 'facebook', 'https://www.facebook.com/rati.gelashvili')
+  ]),
   person("safareli", t("Irakli Safareli"), t("Front-End Developer"), "/images/team/safareli.jpg", [
     link("twitter", "twitter", "https://twitter.com/safareli")
     link("google-plus", "google+", "https://google.com/+IrakliSafareli")
