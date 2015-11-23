@@ -39,6 +39,7 @@ sponsorGroups = [
 mediaPartners = [
   sponsor("DOU hackathon", "http://hack.dou.ua/", "/images/sponsors/DOU_Hackaton_revolution_big.svg")
   sponsor("IT KPI", "http://itkpi.pp.ua ", "/images/sponsors/it_kpi.svg")
+  sponsor("AGHacks", "http://aghacks.com ", "/images/sponsors/aghacks.svg")
 ]
 
 partners = [
