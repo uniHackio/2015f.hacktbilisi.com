@@ -75,9 +75,14 @@ team = [
   ])
 ]
 speakers = [
-  person('gmamaladze', t('George Mamaladze', 'გიორგი მამალაძე'), t('Architect at Siemens.'), '/images/speakers/mamaladze.jpeg', [
+  person('gmamaladze', t('George Mamaladze', 'გიორგი მამალაძე'), t('Architect at Siemens'), '/images/speakers/mamaladze.jpeg', [
     link('twitter', 'twitter', 'https://twitter.com/gmamaladze')
     link('google-plus', 'google+', 'https://google.com/+GeorgeMamaladze')
+  ]),
+  person('shgiorgobiani', t('Shota Giorgobiani', 'შოთა გიორგობიანი'), t('Software Developer'), '/images/speakers/giorgobiani.jpg', [
+    link('twitter', 'twitter', 'https://twitter.com/shgiorgobiani')
+    link('facebook', 'facebook', 'https://www.facebook.com/shota.giorgobiani')
+    link("linkedin", "linkedin", "https://www.linkedin.com/in/shotagiorgobiani")
   ]),
   person("safareli", t("Irakli Safareli"), t("Front-End Developer"), "/images/team/safareli.jpg", [
     link("twitter", "twitter", "https://twitter.com/safareli")
