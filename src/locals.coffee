@@ -84,6 +84,10 @@ speakers = [
     link('facebook', 'facebook', 'https://www.facebook.com/shota.giorgobiani')
     link("linkedin", "linkedin", "https://www.linkedin.com/in/shotagiorgobiani")
   ]),
+  person('ratigelashvili', t('Rati Gelashvili', 'რატი გელაშვილი'), t('Ph.D. Student @ MIT, Multicore Algorithmics Group'), '/images/speakers/rati.jpg', [
+    link('paper-plane', 'MIT', 'http://web.mit.edu/gelash/www/')
+    link('facebook', 'facebook', 'https://www.facebook.com/rati.gelashvili')
+  ]),
   person("safareli", t("Irakli Safareli"), t("Front-End Developer"), "/images/team/safareli.jpg", [
     link("twitter", "twitter", "https://twitter.com/safareli")
     link("google-plus", "google+", "https://google.com/+IrakliSafareli")
