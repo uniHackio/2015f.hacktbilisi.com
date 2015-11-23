@@ -39,6 +39,7 @@ sponsorGroups = [
 mediaPartners = [
   sponsor("DOU hackathon", "http://hack.dou.ua/", "/images/sponsors/DOU_Hackaton_revolution_big.svg")
   sponsor("IT KPI", "http://itkpi.pp.ua ", "/images/sponsors/it_kpi.svg")
+  sponsor("Marketer", "http://marketer.ge ", "/images/sponsors/marketer.svg")
   sponsor("AGHacks", "http://aghacks.com ", "/images/sponsors/aghacks.svg")
 ]
 
@@ -85,7 +86,7 @@ speakers = [
     link('facebook', 'facebook', 'https://www.facebook.com/shota.giorgobiani')
     link("linkedin", "linkedin", "https://www.linkedin.com/in/shotagiorgobiani")
   ]),
-  person('ratigelashvili', t('Rati Gelashvili', 'რატი გელაშვილი'), t('Ph.D. Student @ MIT, Multicore Algorithmics Group'), '/images/speakers/rati.jpg', [
+  person('ratigelashvili', t('Rati Gelashvili', 'რატი გელაშვილი'), t('Ph.D. Student at MIT, Multicore Algorithmics Group'), '/images/speakers/rati.jpg', [
     link('paper-plane', 'MIT', 'http://web.mit.edu/gelash/www/')
     link('facebook', 'facebook', 'https://www.facebook.com/rati.gelashvili')
   ]),
@@ -93,7 +94,11 @@ speakers = [
     link('paper-plane', 'MIT', 'http://web.mit.edu/gelash/www/')
     link('facebook', 'facebook', 'https://www.facebook.com/rati.gelashvili')
   ]),
-  person("safareli", t("Irakli Safareli"), t("Front-End Developer"), "/images/team/safareli.jpg", [
+  person('guramkajaia', t('Guram Kajaia', 'გურამ ქაჯაია'), t('Software Developer at SHIFT'), '/images/speakers/kajaia.jpg', [
+    link('linkedin', 'linkedin', 'https://www.linkedin.com/in/guramkajaia')
+    link('twitter', 'twitter', 'https://twitter.com/guramkajaia')
+  ]),
+  person("safareli", t('Irakli Safareli', 'ირაკლი საფარიშვილი'), t("Front-End Developer"), "/images/team/safareli.jpg", [
     link("twitter", "twitter", "https://twitter.com/safareli")
     link("google-plus", "google+", "https://google.com/+IrakliSafareli")
     link("youtube-play", "youtube", "https://www.youtube.com/isafareli")
