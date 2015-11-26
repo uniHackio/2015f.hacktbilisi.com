@@ -25,7 +25,7 @@ sponsorGroups = [
     sponsor("Redberry", "http://redberry.ge/", "/images/sponsors/redberry.svg")
   ]),
   group('mega',[
-    sponsor("Webintelligence", "http://webintelligence.de", "/images/sponsors/w3i.png")
+    sponsor("Webintelligence", "http://webintelligence.de", "/images/sponsors/w3i.svg")
     sponsor("Alta Software", "http://altasoft.ge", "/images/sponsors/altasoftware.svg")
     sponsor("Vere Loft", "https://www.facebook.com/Vere-Loft-1521072498212295", "/images/sponsors/vere.svg")
     sponsor("AzRy", "http://azry.com", "/images/sponsors/azry.svg")
