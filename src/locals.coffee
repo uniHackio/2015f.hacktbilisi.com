@@ -7,7 +7,7 @@ args2Obj = ->
       result
     ), {}
 
-group = args2Obj("name", "sponsors")
+group = args2Obj("name", "items")
 sponsor = partner = args2Obj("name", "href", "image")
 language = args2Obj("url", "title")
 person = args2Obj("id", "name", "position", "image", "links")
@@ -42,14 +42,19 @@ mediaPartners = [
   sponsor("IT KPI", "http://itkpi.pp.ua ", "/images/sponsors/it_kpi.svg")
   sponsor("AGHacks", "http://aghacks.com ", "/images/sponsors/aghacks.svg")
   sponsor("Marketer", "http://marketer.ge ", "/images/sponsors/marketer.svg")
+  sponsor("ტაბულა", "http://www.tabula.ge ", "/images/sponsors/tabula.svg")
 ]
 
 partners = [
-  sponsor("Major League Hacking", "http://mlh.io", "/images/sponsors/mlh.svg")
-  sponsor("Bloomberg Business", "http://bloomberg.com", "/images/sponsors/bloomberg.svg")
-  sponsor("Dash at HackTbilisi", "https://kapeli.com/hacktbilisi", "/images/sponsors/dash.png")
-  sponsor("Microsoft", "https://www.microsoft.com", "/images/sponsors/microsoft.svg")
-  sponsor("IHUB Tbilisi", "https://www.facebook.com/IHUB-Tbilisi-863627120411270", "/images/sponsors/ihub.svg")
+  group('kilo',[
+    sponsor("Major League Hacking", "http://mlh.io", "/images/sponsors/mlh.svg")
+    sponsor("Bloomberg Business", "http://bloomberg.com", "/images/sponsors/bloomberg.svg")
+  ])
+  group('kilo',[
+    sponsor("Dash at HackTbilisi", "https://kapeli.com/hacktbilisi", "/images/sponsors/dash.png")
+    sponsor("Microsoft", "https://www.microsoft.com", "/images/sponsors/microsoft.svg")
+    sponsor("IHUB Tbilisi", "https://www.facebook.com/IHUB-Tbilisi-863627120411270", "/images/sponsors/ihub.svg")
+  ])
 ]
 
 team = [

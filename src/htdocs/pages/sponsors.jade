@@ -18,6 +18,11 @@ mixin sizer(sponsor,sizeName)
         a.u-display-block(title=sponsor.name, href=sponsor.href style="height: 70px; background: url("+sponsor.image+") no-repeat center; background-size: contain;")
   
     
+mixin groupSizer(groups)
+  for group in groups
+    .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter.u-marginBottom-s
+      for items in group.items
+        +sizer(items, group.name)
 
 .Grid.Grid--directionCol.Grid--spaceBetween.u-heightMin-vFull.u-background-whitish.u-color-blackish.u-position-relative(class="u-paddingAll-s u-paddingAll-m@s u-paddingAll-xl@m")
   .Grid-block.Grid-block--fit
@@ -30,16 +35,11 @@ mixin sizer(sponsor,sizeName)
             +icon('bars')
     .Content
       h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('სპონსორები')
-      for sponsorGroup in sponsorGroups
-        .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter.u-marginBottom-s
-          for sponsor in sponsorGroup.sponsors
-            +sizer(sponsor, sponsorGroup.name)
+      +groupSizer(sponsorGroups)
 
       if partners.length
         h1.u-marginTop-xxl.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginBottom-s.u-text-center=t('პარტნიორები')
-        .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter
-          for partner in partners
-            +sizer(partner, 'kilo')
+        +groupSizer(partners)
 
 
       if mediaPartners.length
