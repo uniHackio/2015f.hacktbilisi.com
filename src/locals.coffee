@@ -33,6 +33,7 @@ sponsorGroups = [
   ]),
   group('kilo',[
     sponsor("JetBrains", "http://jetbrains.com", "/images/sponsors/jetbrains.svg")
+    sponsor("Social Sharks", "http://socialsharks.ge", "/images/sponsors/socialsharks.svg")
   ])
 ]
 
