@@ -53,6 +53,7 @@ partners = [
   ])
   group('kilo',[
     sponsor("Dash at HackTbilisi", "https://kapeli.com/hacktbilisi", "/images/sponsors/dash.png")
+    sponsor("UG Lemondo Trainings", "http://trainings.edu.ge", "/images/sponsors/ug_lemondo.svg")
     sponsor("Microsoft", "https://www.microsoft.com", "/images/sponsors/microsoft.svg")
     sponsor("IHUB Tbilisi", "https://www.facebook.com/IHUB-Tbilisi-863627120411270", "/images/sponsors/ihub.svg")
   ])
