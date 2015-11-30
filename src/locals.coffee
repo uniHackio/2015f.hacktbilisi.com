@@ -108,6 +108,12 @@ speakers = [
     link('twitter', 'twitter', 'http://twitter.com/otomeskhy')
     link('linkedin', 'linkedin', 'http://linkedin.com/in/otomeskhy')
   ]),
+  person('chekurishvili', t('Otar Chekurishvili', 'ოთარ ჩეკურიშვილი'), t('Full stack software developer'), '/images/speakers/chekurishvili.jpg', [
+    link('paper-plane', 'otar.me', 'http://otar.me/')
+    link('linkedin', 'linkedin', 'http://www.linkedin.com/in/otarch')
+    link('twitter', 'twitter', 'http://twitter.com/otarch')
+    link('github', 'github', 'https://github.com/otar')
+  ]),
   person('guramkajaia', t('Guram Kajaia', 'გურამ ქაჯაია'), t('Software Developer at SHIFT'), '/images/speakers/kajaia.jpg', [
     link('linkedin', 'linkedin', 'https://www.linkedin.com/in/guramkajaia')
     link('twitter', 'twitter', 'https://twitter.com/guramkajaia')
