@@ -17,19 +17,20 @@ include ../includes/icon.jade
             .FlexEmbed
               .FlexEmbed-ratio.FlexEmbed-ratio--4by5
               .FlexEmbed-content.u-fillChild
-                //- .Card.u-fillChild
+                .Card.u-fillChild
                   //- .Card-overlay.u-background-red
-                  //- .Card-content.u-fillChild
-                .Grid.Grid--directionCol
-                  .Grid-block.Grid-block--weight1.u-fillChild(id=speaker.id, style="background:url('"+speaker.image+"') center; background-size:cover")
-                    //- .u-background-red.u-showOnCardHover.u-paddingAll-xs.u-wraped Lorem ipsum
-                  .Grid-block.Grid-block--fit.u-background-red.u-paddingAll-xs
-                    h1.u-textSize-s.u-textFamily-secondary=t(speaker.name)
-                    h2.u-textSize-xs.u-color-blackish=t(speaker.position)
-                    nav.u-textSize-xs.u-color-blackish
-                      each link in speaker.links
-                        a.u-marginRight-xs(title=t('%s on %s',[t(speaker.name), link.on]) href=link.href)
-                          +icon(link.icon)
+                  .Card-content.u-fillChild
+                    .Grid.Grid--directionCol
+                      .Grid-block.Grid-block--weight1.u-fillChild.u-paddingAll-xs(id=speaker.id, style="background:url('"+speaker.image+"') center; background-size:cover")
+                        if speaker.title
+                          .u-showOnCardHover.u-background-red.u-showOnCardHover.u-paddingAll-xs.u-wraped=speaker.title
+                      .Grid-block.Grid-block--fit.u-background-red.u-paddingAll-xs
+                        h1.u-textSize-s.u-textFamily-secondary=t(speaker.name)
+                        h2.u-textSize-xs.u-color-blackish=t(speaker.position)
+                        nav.u-textSize-xs.u-color-blackish
+                          each link in speaker.links
+                            a.u-marginRight-xs(title=t('%s on %s',[t(speaker.name), link.on]) href=link.href)
+                              +icon(link.icon)
 
   .Grid-block.Grid-block--fit.u-marginTop-xxl
     p.u-textSize-l.u-color-grayLight.u-text-center=t('want_to_be_speaker')+ ' ' 

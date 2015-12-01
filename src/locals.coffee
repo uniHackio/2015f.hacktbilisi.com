@@ -10,7 +10,7 @@ args2Obj = ->
 group = args2Obj("name", "items")
 sponsor = partner = args2Obj("name", "href", "image")
 language = args2Obj("url", "title")
-person = args2Obj("id", "name", "position", "image", "links")
+person = args2Obj("id", "name", "position", "image", "links", "title")
 link = args2Obj("icon", "on", "href")
 t = (en,ka)->
   en:en, ka:ka || en
@@ -93,38 +93,42 @@ speakers = [
   person('gmamaladze', t('George Mamaladze', 'გიორგი მამალაძე'), t('Architect at Siemens'), '/images/speakers/mamaladze.jpeg', [
     link('twitter', 'twitter', 'https://twitter.com/gmamaladze')
     link('google-plus', 'google+', 'https://google.com/+GeorgeMamaladze')
-  ]),
+  ], ""),
   person('shgiorgobiani', t('Shota Giorgobiani', 'შოთა გიორგობიანი'), t('Software Developer'), '/images/speakers/giorgobiani.jpg', [
     link('twitter', 'twitter', 'https://twitter.com/shgiorgobiani')
     link('facebook', 'facebook', 'https://www.facebook.com/shota.giorgobiani')
     link("linkedin", "linkedin", "https://www.linkedin.com/in/shotagiorgobiani")
-  ]),
+  ], "More than Code"),
   person('ratigelashvili', t('Rati Gelashvili', 'რატი გელაშვილი'), t('Ph.D. Student at MIT, Multicore Algorithmics Group'), '/images/speakers/rati.jpg', [
     link('paper-plane', 'mit.edu', 'http://web.mit.edu/gelash/www/')
     link('facebook', 'facebook', 'https://www.facebook.com/rati.gelashvili')
-  ]),
+  ], "Multicore Synchronization"),
   person('otomeskhy', t('Oto Meskhy', 'ოთო მესხი'), t('Full Stack Developer / Software Architect'), '/images/speakers/meskhy.jpeg', [
     link('paper-plane', 'otomeskhy.com', 'http://otomeskhy.com')
     link('twitter', 'twitter', 'http://twitter.com/otomeskhy')
     link('linkedin', 'linkedin', 'http://linkedin.com/in/otomeskhy')
-  ]),
-  person('chekurishvili', t('Otar Chekurishvili', 'ოთარ ჩეკურიშვილი'), t('Full stack software developer'), '/images/speakers/chekurishvili.jpg', [
+  ], "Case study: Protoplast - Custom Hybrid Mobile Application Framework."),
+  person('ioseb', t('Ioseb Dzmanashvili', 'იოსებ ძმანაშვილი'), t('Ph.D, Software Architect at AzRy'), '/images/speakers/ioseb.jpg', [
+    link('twitter', 'twitter', 'http://twitter.com/iosebi')
+    link('github', 'github', 'http://github.com/ioseb ')
+  ], "Immutability and Persistent Data Structures with ES6"),
+  person('chekurishvili', t('Otar Chekurishvili', 'ოთარ ჩეკურიშვილი'), t('Full Stack software developer'), '/images/speakers/chekurishvili.jpg', [
     link('paper-plane', 'otar.me', 'http://otar.me/')
     link('linkedin', 'linkedin', 'http://www.linkedin.com/in/otarch')
     link('twitter', 'twitter', 'http://twitter.com/otarch')
     link('github', 'github', 'https://github.com/otar')
-  ]),
+  ], "Back to Basics with Static Websites"),
   person('guramkajaia', t('Guram Kajaia', 'გურამ ქაჯაია'), t('Software Developer at SHIFT'), '/images/speakers/kajaia.jpg', [
     link('linkedin', 'linkedin', 'https://www.linkedin.com/in/guramkajaia')
     link('twitter', 'twitter', 'https://twitter.com/guramkajaia')
-  ]),
+  ], "Life of a Software Generalist"),
   person("safareli", t('Irakli Safareli', 'ირაკლი საფარიშვილი'), t("Front-End Developer"), "/images/team/safareli.jpg", [
     link("twitter", "twitter", "https://twitter.com/safareli")
     link("google-plus", "google+", "https://google.com/+IrakliSafareli")
     link("youtube-play", "youtube", "https://www.youtube.com/isafareli")
     link("linkedin", "linkedin", "https://www.linkedin.com/in/safareli")
     link("github", "github", "https://github.com/safareli")
-  ])
+  ], "")
 ]
 
 
