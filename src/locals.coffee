@@ -30,6 +30,7 @@ sponsorGroups = [
     sponsor("Vere Loft", "https://www.facebook.com/Vere-Loft-1521072498212295", "/images/sponsors/vere.svg")
     sponsor("AzRy", "http://azry.com", "/images/sponsors/azry.svg")
     sponsor("Vivus.ge", "http://vivus.ge", "/images/sponsors/vivus.svg")
+    sponsor("Innotec", "http://innotec.ge", "/images/sponsors/innotec.svg")
   ]),
   group('kilo',[
     sponsor("JetBrains", "http://jetbrains.com", "/images/sponsors/jetbrains.svg")
