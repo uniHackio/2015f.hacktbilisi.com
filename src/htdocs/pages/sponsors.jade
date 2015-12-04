@@ -37,6 +37,10 @@ mixin groupSizer(groups)
       h1.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginVertical-s.u-text-center=t('სპონსორები')
       +groupSizer(sponsorGroups)
 
+      h1.u-marginTop-xxl.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginBottom-s.u-text-center=t('მასპინძელი')
+      .Grid.Grid--wrap.Grid--spaceCenter.Grid--gutterWide.Grid--alignCenter
+        +sizer(host, 'giga')
+
       if partners.length
         h1.u-marginTop-xxl.Heading.u-textSize-xxl.u-textFamily-secondary.u-color-grayLight.u-marginBottom-s.u-text-center=t('პარტნიორები')
         +groupSizer(partners)

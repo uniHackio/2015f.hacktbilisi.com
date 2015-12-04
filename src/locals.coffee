@@ -16,10 +16,11 @@ t = (en,ka)->
   en:en, ka:ka || en
 
 sponsorGroups = [
-  # group('peta',[
-  # ]),
-  group('tera',[
+  group('peta',[
     sponsor("Shift", "http://driveshift.com/", "/images/sponsors/shift.svg")
+  ]),
+  group('tera',[
+    sponsor("Zoomer", "http://zoommer.ge/", "/images/sponsors/zoommer.svg")
   ]),
   group('giga',[
     sponsor("Redberry", "http://redberry.ge/", "/images/sponsors/redberry.svg")
@@ -58,6 +59,8 @@ partners = [
   group('kilo',[
     sponsor("Dash at HackTbilisi", "https://kapeli.com/hacktbilisi", "/images/sponsors/dash.png")
     sponsor("Microsoft", "https://www.microsoft.com", "/images/sponsors/microsoft.svg")
+    sponsor("TBC Bank", "http://tbcbank.ge", "/images/sponsors/tbc.svg")
+    sponsor("KISShack", "https://www.facebook.com/KISShack-626397297497066", "/images/sponsors/kisshack.svg")
     sponsor("IHUB Tbilisi", "https://www.facebook.com/IHUB-Tbilisi-863627120411270", "/images/sponsors/ihub.svg")
     sponsor("Educare Georgia", "http://educaregeorgia.org", "/images/sponsors/educare.svg")
   ])
@@ -132,7 +135,7 @@ speakers = [
   ], "")
 ]
 
-
+host = sponsor("Kakha Bendukidze University Campus", "http://www.freeuni.edu.ge/", "/images/sponsors/campus.svg")
 
 module.exports =
   data:
@@ -141,6 +144,7 @@ module.exports =
     partners: partners
     speakers: speakers
     team: team
+    host: host
   defaultLanguageKey: 'en'
   locals:
     en:
@@ -175,7 +179,9 @@ module.exports =
       'want_to_be_partner' : 'Want to partner with us?'
       'want_to_be_speaker' : 'Want to be a speaker?'
       'register_url' : 'https://hacktbilisi.typeform.com/to/v1fGHo'
+      'მასპინძელი' : 'Host'
     ka:
+      'მასპინძელი' : 'მასპინძელი'
       'register_url' : 'https://hacktbilisi.typeform.com/to/nfRq9x'
       'want_to_be_speaker' : 'გსურთ იყოთ სპიკერი?'
       'want_to_be_partner' : 'გსურთ ჩვენთან პარტნიორობა?'
