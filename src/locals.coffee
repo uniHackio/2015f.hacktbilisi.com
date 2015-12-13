@@ -61,7 +61,6 @@ partners = [
     sponsor("Microsoft", "https://www.microsoft.com", "/images/sponsors/microsoft.svg")
     sponsor("TBC Bank", "http://tbcbank.ge", "/images/sponsors/tbc.svg")
     sponsor("KISShack", "https://www.facebook.com/KISShack-626397297497066", "/images/sponsors/kisshack.svg")
-    sponsor("IHUB Tbilisi", "https://www.facebook.com/IHUB-Tbilisi-863627120411270", "/images/sponsors/ihub.svg")
     sponsor("Educare Georgia", "http://educaregeorgia.org", "/images/sponsors/educare.svg")
   ])
 ]
