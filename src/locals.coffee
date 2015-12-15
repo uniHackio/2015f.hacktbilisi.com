@@ -96,7 +96,7 @@ speakers = [
   person('gmamaladze', t('George Mamaladze', 'გიორგი მამალაძე'), t('Architect at Siemens'), '/images/speakers/mamaladze.jpeg', [
     link('twitter', 'twitter', 'https://twitter.com/gmamaladze')
     link('google-plus', 'google+', 'https://google.com/+GeorgeMamaladze')
-  ], ""),
+  ], "Basics of Scalable Design"),
   person('shgiorgobiani', t('Shota Giorgobiani', 'შოთა გიორგობიანი'), t('Software Developer'), '/images/speakers/giorgobiani.jpg', [
     link('twitter', 'twitter', 'https://twitter.com/shgiorgobiani')
     link('facebook', 'facebook', 'https://www.facebook.com/shota.giorgobiani')
@@ -124,14 +124,7 @@ speakers = [
   person('guramkajaia', t('Guram Kajaia', 'გურამ ქაჯაია'), t('Software Developer at SHIFT'), '/images/speakers/kajaia.jpg', [
     link('linkedin', 'linkedin', 'https://www.linkedin.com/in/guramkajaia')
     link('twitter', 'twitter', 'https://twitter.com/guramkajaia')
-  ], "Life of a Software Generalist"),
-  person("safareli", t('Irakli Safareli', 'ირაკლი საფარიშვილი'), t("Front-End Developer"), "/images/team/safareli.jpg", [
-    link("twitter", "twitter", "https://twitter.com/safareli")
-    link("google-plus", "google+", "https://google.com/+IrakliSafareli")
-    link("youtube-play", "youtube", "https://www.youtube.com/isafareli")
-    link("linkedin", "linkedin", "https://www.linkedin.com/in/safareli")
-    link("github", "github", "https://github.com/safareli")
-  ], "")
+  ], "Life of a Software Generalist")
 ]
 
 host = sponsor("Kakha Bendukidze University Campus", "http://www.freeuni.edu.ge/", "/images/sponsors/campus.svg")
