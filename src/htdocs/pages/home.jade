@@ -23,7 +23,7 @@ mixin mainNavigationLink(url,target,title)
             +mainNavigationLink('#sponsors', 'sponsors', t('სპონსორები'))
             +mainNavigationLink('#team', 'team' , t('გუნდი'))
             +mainNavigationLink('#map', 'location' , t('location'))
-            //- +mainNavigationLink('/agenda#' + t('languagePrefix'), 'agenda', t('განრიგი'))
+            +mainNavigationLink('/agenda#' + t('languageKey'), 'agenda', t('განრიგი'))
             +mainNavigationLink(t('nextLanguage').url, 'nextLanguage', t('nextLanguage').title)(lang="en")
       .Grid-block.Grid-block--fit.u-position-relative.u-display-none(class="u-display-block@s")
         //- spacer

@@ -28,7 +28,7 @@ sponsorGroups = [
   group('mega',[
     sponsor("Webintelligence", "http://webintelligence.de", "/images/sponsors/w3i.svg")
     sponsor("Alta Software", "http://altasoft.ge", "/images/sponsors/altasoftware.svg")
-    sponsor("Vere Loft", "https://www.facebook.com/Vere-Loft-1521072498212295", "/images/sponsors/vere.svg")
+    sponsor("Vere Loft", "http://vereloft.ge", "/images/sponsors/vere.svg")
     sponsor("AzRy", "http://azry.com", "/images/sponsors/azry.svg")
     sponsor("Vivus.ge", "http://vivus.ge", "/images/sponsors/vivus.svg")
     sponsor("Innotec", "http://innotec.ge", "/images/sponsors/innotec.svg")
@@ -106,11 +106,6 @@ speakers = [
     link('paper-plane', 'mit.edu', 'http://web.mit.edu/gelash/www/')
     link('facebook', 'facebook', 'https://www.facebook.com/rati.gelashvili')
   ], "Multicore Synchronization"),
-  person('otomeskhy', t('Oto Meskhy', 'ოთო მესხი'), t('Full Stack Developer / Software Architect'), '/images/speakers/meskhy.jpeg', [
-    link('paper-plane', 'otomeskhy.com', 'http://otomeskhy.com')
-    link('twitter', 'twitter', 'http://twitter.com/otomeskhy')
-    link('linkedin', 'linkedin', 'http://linkedin.com/in/otomeskhy')
-  ], "Case study: Protoplast - Custom Hybrid Mobile Application Framework."),
   person('ioseb', t('Ioseb Dzmanashvili', 'იოსებ ძმანაშვილი'), t('Ph.D, Software Architect at AzRy'), '/images/speakers/ioseb.jpg', [
     link('twitter', 'twitter', 'http://twitter.com/iosebi')
     link('github', 'github', 'http://github.com/ioseb ')
